@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="موقع UP-Smart التعريفي — الرفيق الأكاديمي الذكي لطلاب كلية هندسة البرمجيات والذكاء الاصطناعي بجامعة فلسطين. جرب محاكي التطبيق التفاعلي وحمّل النسخة المستقرة APK الآن.">
+    <meta name="keywords" content="UP-Smart, جامعة فلسطين, تطبيق طالب ذكي, هندسة برمجيات, ذكاء اصطناعي, تنزيل APK, مساعد ذكي, منتدى طلابي">
+    <meta name="author" content="محمد النويري">
+    <title>تطبيق UP-Smart — الرفيق الأكاديمي الذكي لجامعة فلسطين</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+    <!-- Grid Overlay Background -->
+    <div class="grid-overlay"></div>
+
+    <!-- Background Glow Elements (Aurora Effect) -->
+    <div class="aurora aurora-1"></div>
+    <div class="aurora aurora-2"></div>
+    <div class="aurora aurora-3"></div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo-area">
+                <div class="logo-box">
+                    <img src="assets/images/app_icon.png" alt="شعار UP-Smart" class="logo-img">
+                </div>
+                <div class="logo-title">
+                    <h2>UP-Smart</h2>
+                    <p>جامعة فلسطين</p>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="#hero">الرئيسية</a>
+                <a href="#features">الميزات</a>
+                <a href="#simulator-section">المحاكي التفاعلي</a>
+                <a href="#trainings">الدورات التدريبية</a>
+                <a href="#courses">المساقات الأكاديمية</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="#download" class="btn btn-outline">تنزيل التطبيق</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <span class="logo-text">UP-Smart</span>
+            <button class="close-btn" id="closeDrawer" aria-label="إغلاق القائمة">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="drawer-links">
+            <a href="#hero" class="drawer-link">الرئيسية</a>
+            <a href="#features" class="drawer-link">الميزات</a>
+            <a href="#simulator-section" class="drawer-link">المحاكي التفاعلي</a>
+            <a href="#trainings" class="drawer-link">الدورات التدريبية</a>
+            <a href="#courses" class="drawer-link">المساقات الأكاديمية</a>
+            <a href="#download" class="drawer-link btn btn-gradient btn-full">تحميل الـ APK</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge-new">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>الإصدار المستقر الحالي: v<span class="app-version-txt">1.4.4</span></span>
+                </div>
+                <h1>واجهتك الذكية لمستقبل <span class="gradient-text">برمجي واعد</span></h1>
+                <p class="hero-subtitle">تطبيق الهاتف المتكامل لطلاب كلية هندسة البرمجيات والذكاء الاصطناعي بجامعة فلسطين. يجمع دراستك، ومواعيدك، ومساعدك الإداري الذكي في يدك.</p>
+                
+                <div class="hero-actions">
+                    <a href="#download" class="btn btn-gradient btn-lg">
+                        <i class="fa-solid fa-download"></i>
+                        تحميل مباشر APK
+                    </a>
+                    <a href="#simulator-section" class="btn btn-outline btn-lg">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        جرّب التطبيق تفاعلياً
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">تنسيق عربي RTL أصلي</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">Offline</span>
+                        <span class="stat-label">تنبيهات تعمل بدون إنترنت</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">No Ads</span>
+                        <span class="stat-label">خالٍ تماماً من الإعلانات</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Dashboard Screens for Premium Look -->
+            <div class="hero-visual">
+                <div class="floating-cards-container">
+                    <div class="floating-glow-bg"></div>
+                    
+                    <!-- Floating Card 1: Next Up Card -->
+                    <div class="floating-card card-next-up">
+                        <div class="floating-card-header">
+                            <span class="f-badge-time"><i class="fa-regular fa-clock"></i> بعد 15 دقيقة</span>
+                            <span class="f-badge-online">أونلاين</span>
+                        </div>
+                        <h3>مقدمة في شبكات عملي</h3>
+                        <p class="f-code">BSAI 1301 · قاعة زوم 1</p>
+                        <div class="f-timer">00:14:59</div>
+                    </div>
+                    
+                    <!-- Floating Card 2: AI Assistant Response -->
+                    <div class="floating-card card-ai-chat">
+                        <div class="f-chat-header">
+                            <i class="fa-solid fa-robot"></i>
+                            <span>المساعد الذكي</span>
+                        </div>
+                        <p class="f-chat-msg">تعتمد الرسوم الفصلية على نسبة منحتك الأكاديمية بالكامل...</p>
+                    </div>
+
+                    <!-- Floating Card 3: Streak Trophy -->
+                    <div class="floating-card card-streak">
+                        <i class="fa-solid fa-fire text-warning"></i>
+                        <div>
+                            <h4>أيام Streak</h4>
+                            <p>12 يوماً متتالياً من الإنجاز!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Key Features Grid -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>ميزات مبتكرة <span class="gradient-text">ترتقي بدراستك</span></h2>
+                <p>يجمع التطبيق كل ما يحتاجه طالب الكلية في منصة سلسة وموفرة للوقت وبدون إعلانات.</p>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card glass-card reveal">
+                    <div class="feature-icon accent-blue">
+                        <i class="fa-solid fa-house-laptop"></i>
+                    </div>
+                    <h3>لوحة تحكم ذكية</h3>
+                    <p>تعرض محاضرتك القادمة، وعدادًا تنازليًا بالدقائق والثواني، وجدول مواعيدك اليومي في تصميم زجاجي تفاعلي مريح للعين.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card glass-card reveal">
+                    <div class="feature-icon accent-teal">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3>مساعد Gemini الذكي</h3>
+                    <p>يساندك إدارياً بالإجابة الفورية عن تساؤلات الرسوم والتسجيل وحل المشكلات الأكاديمية مع دعم قراءة وتفسير الصور المرفوعة.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card glass-card reveal">
+                    <div class="feature-icon accent-purple">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                    </div>
+                    <h3>المساقات والملفات الفورية</h3>
+                    <p>تنظيم كامل لموادك؛ روابط المحاضرات، ملفات الشروحات والملخصات على Google Drive، مع إمكانية التواصل المباشر مع الدكتور بضغطة زر.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card glass-card reveal">
+                    <div class="feature-icon accent-green">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3>منتدى تفاعلي داخلي</h3>
+                    <p>مجموعات حوارية منظمة لكل مساق. تبادل الأسئلة، صوّت للحلول الصحيحة، وتفاعل مع زملائك دون تشويش منصات التواصل المفتوحة.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card glass-card reveal">
+                    <div class="feature-icon accent-orange">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <h3>تنبيهات من غير إنترنت</h3>
+                    <p>برمجة تنبيهات محلية تذكرك بتسليم الواجبات والامتحانات قبل 24 ساعة لضمان عدم فوات أي موعد حتى لو كان هاتفك غير متصل بالشبكة.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card glass-card reveal">
+                    <div class="feature-icon accent-purple">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3>أدوات تنبؤ المعدل</h3>
+                    <p>حاسبة معدل ذكية مبنية على أسس دقيقة لتوقع معدلك الفصلي وتأثير درجاتك في المساقات الفردية على معدلك التراكمي العام.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulator Section (Focus of the landing page) -->
+    <section class="simulator-section" id="simulator-section">
+        <div class="container simulator-container">
+            <div class="simulator-text">
+                <div class="section-title reveal" style="text-align: right; margin-right: 0; margin-bottom: 32px;">
+                    <h2>جرّب واجهات التطبيق <span class="gradient-text">حياً وتفاعلياً</span></h2>
+                    <p>اضغط على أقسام الميزات أدناه لتتحكم في شاشة الهاتف مباشرة وتستعرض تبويبات التطبيق الرئيسية وتجرب المساعد الذكي.</p>
+                </div>
+                
+                <!-- Interactive Feature Panels (Desktop Only) -->
+                <div class="sim-panels">
+                    <div class="sim-panel active" data-target="home">
+                        <div class="panel-icon"><i class="fa-solid fa-house"></i></div>
+                        <div>
+                            <h4>لوحة التحكم اليومية (الرئيسية)</h4>
+                            <p>تنبيهات المحاضرة القادمة، عداد العد التنازلي المباشر، وتتبع سريع لمساقاتك الدراسية النشطة.</p>
+                        </div>
+                    </div>
+                    <div class="sim-panel" data-target="courses">
+                        <div class="panel-icon"><i class="fa-solid fa-book-open"></i></div>
+                        <div>
+                            <h4>بنك المساقات الأكاديمية</h4>
+                            <p>قائمة مساقات الفصل والكلية مع أزرار تشغيل اليوتيوب وملفات الدرايف وواتساب المحاضر.</p>
+                        </div>
+                    </div>
+                    <div class="sim-panel" data-target="chat">
+                        <div class="panel-icon"><i class="fa-solid fa-robot"></i></div>
+                        <div>
+                            <h4>مساعد الذكاء الاصطناعي الإداري</h4>
+                            <p>محاكي دردشة Gemini المكتوب لمعالجة استفسارات التسجيل واللوائح المالية وحساب المنح.</p>
+                        </div>
+                    </div>
+                    <div class="sim-panel" data-target="forum">
+                        <div class="panel-icon"><i class="fa-solid fa-comments"></i></div>
+                        <div>
+                            <h4>منتدى نقاشات الطلاب</h4>
+                            <p>قنوات تواصل ومجموعات مغلقة لكل مساق لمشاركة الواجبات وحلها بالتصويت والإعجاب.</p>
+                        </div>
+                    </div>
+                    <div class="sim-panel" data-target="profile">
+                        <div class="panel-icon"><i class="fa-solid fa-user"></i></div>
+                        <div>
+                            <h4>حساب الطالب والـ Streak</h4>
+                            <p>متابعة سلسلة إنجازاتك اليومية، وأدوات حاسبة المعدل وتوقعات النتائج الأكاديمية.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="simulator-visual">
+                <!-- Mobile Only Simulator Tabs (Visible only on screen < 768px for clean UX) -->
+                <div class="sim-mobile-tabs">
+                    <div class="sim-mobile-tab active" data-target="home"><i class="fa-solid fa-house"></i></div>
+                    <div class="sim-mobile-tab" data-target="courses"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="sim-mobile-tab" data-target="chat"><i class="fa-solid fa-robot"></i></div>
+                    <div class="sim-mobile-tab" data-target="forum"><i class="fa-solid fa-comments"></i></div>
+                    <div class="sim-mobile-tab" data-target="profile"><i class="fa-solid fa-user"></i></div>
+                </div>
+
+                <div class="phone-mockup-wrapper">
+                    <div class="glow-ring"></div>
+                    
+                    <!-- High-fidelity phone frame -->
+                    <div class="phone-mockup">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen" id="phoneScreen">
+                            
+                            <!-- Header (Persistent on some views) -->
+                            <div class="phone-header">
+                                <div class="greeting-box">
+                                    <span class="greeting-time">مرحباً بك في</span>
+                                    <span class="greeting-name">UP-Smart 👋</span>
+                                </div>
+                                <div class="portal-badge"><i class="fa-solid fa-globe"></i> بوابة الطالب</div>
+                            </div>
+                            
+                            <!-- VIEW 1: HOME (Active by default) -->
+                            <div class="phone-view active" id="view-home">
+                                <!-- Next Up Card -->
+                                <div class="mock-next-up">
+                                    <div class="next-up-header">
+                                        <span class="badge-time"><i class="fa-regular fa-clock"></i> بعد 15 دقيقة</span>
+                                        <span class="badge-online"><i class="fa-solid fa-video"></i> أونلاين</span>
+                                    </div>
+                                    <h3>مقدمة في شبكات عملي</h3>
+                                    <p class="course-code">BSAI 1301 · قاعة زوم 1</p>
+                                    <div class="countdown-wrapper">
+                                        <p class="countdown-label">يبدأ البث التنازلي في:</p>
+                                        <span class="countdown-timer">00:14:59</span>
+                                    </div>
+                                    <button class="btn-mock-action"><i class="fa-solid fa-lock"></i> دخول البث المباشر</button>
+                                </div>
+                                
+                                <div class="mock-section-title">
+                                    <h4>مساقاتي المضافة</h4>
+                                    <span>الكل</span>
+                                </div>
+                                <div class="mock-grid">
+                                    <div class="mock-course-card">
+                                        <span class="mock-code">BSAI 1210</span>
+                                        <h5>برمجة 2</h5>
+                                        <p>أ. سامح أبو حصيرة</p>
+                                    </div>
+                                    <div class="mock-course-card">
+                                        <span class="mock-code">BSAI 1106</span>
+                                        <h5>شبكات - عملي</h5>
+                                        <p>أ. أحمد أبو مسامح</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- VIEW 2: COURSES -->
+                            <div class="phone-view" id="view-courses">
+                                <div class="mock-view-header-title">المساقات الدراسية</div>
+                                <div class="mock-list">
+                                    <div class="mock-list-item">
+                                        <div class="mock-item-meta">
+                                            <span class="mock-code">BSAI 1210</span>
+                                            <span class="mock-credits">2 ساعة</span>
+                                        </div>
+                                        <h5>برمجة 2</h5>
+                                        <p class="mock-lecturer">أ. سامح أبو حصيرة</p>
+                                        <div class="mock-item-actions">
+                                            <span class="mock-action-pill"><i class="fa-brands fa-youtube"></i> يوتيوب</span>
+                                            <span class="mock-action-pill"><i class="fa-regular fa-folder-open"></i> ملفات</span>
+                                        </div>
+                                    </div>
+                                    <div class="mock-list-item">
+                                        <div class="mock-item-meta">
+                                            <span class="mock-code">BSAI 1301</span>
+                                            <span class="mock-credits">3 ساعات</span>
+                                        </div>
+                                        <h5>الرياضيات العامة</h5>
+                                        <p class="mock-lecturer">د. بنان كلاب</p>
+                                        <div class="mock-item-actions">
+                                            <span class="mock-action-pill"><i class="fa-brands fa-youtube"></i> يوتيوب</span>
+                                        </div>
+                                    </div>
+                                    <div class="mock-list-item">
+                                        <div class="mock-item-meta">
+                                            <span class="mock-code">BSAI 1106</span>
+                                            <span class="mock-credits">1 ساعة</span>
+                                        </div>
+                                        <h5>مقدمة في الشبكات - عملي</h5>
+                                        <p class="mock-lecturer">أ. أحمد أبو مسامح</p>
+                                        <div class="mock-item-actions">
+                                            <span class="mock-action-pill"><i class="fa-brands fa-youtube"></i> يوتيوب</span>
+                                            <span class="mock-action-pill"><i class="fa-regular fa-folder-open"></i> ملفات</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- VIEW 3: CHAT (AI Assistant) -->
+                            <div class="phone-view" id="view-chat">
+                                <div class="mock-chat-header">
+                                    <div class="mock-bot-info">
+                                        <div class="mock-bot-avatar"><i class="fa-solid fa-robot"></i></div>
+                                        <div>
+                                            <h5>المساعد الذكي</h5>
+                                            <p>متصل · Gemini AI</p>
+                                        </div>
+                                    </div>
+                                    <i class="fa-solid fa-rotate-left chat-simulator-reset-btn" id="phoneChatReset" title="إعادة تشغيل المحاكاة"></i>
+                                </div>
+                                <div class="mock-chat-body" id="phoneChatBody">
+                                    <!-- Populated dynamically via JS typing simulator -->
+                                </div>
+                                <div class="mock-chat-footer">
+                                    <div class="mock-chat-input">
+                                        <span class="mock-chat-placeholder" id="phoneChatPlaceholder">اسأل المساعد...</span>
+                                        <span class="mock-send-btn"><i class="fa-solid fa-arrow-up"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- VIEW 4: FORUM -->
+                            <div class="phone-view" id="view-forum">
+                                <div class="mock-view-header-title">منتدى الطلاب</div>
+                                <div class="mock-tabs">
+                                    <span class="mock-tab active">العام</span>
+                                    <span class="mock-tab">مجموعاتي</span>
+                                    <span class="mock-tab">البلاغات</span>
+                                </div>
+                                <div class="mock-forum-posts">
+                                    <div class="mock-post">
+                                        <div class="mock-post-header">
+                                            <div class="mock-user-avatar">أ</div>
+                                            <div>
+                                                <h6>أحمد علي (طالب سنة 2)</h6>
+                                                <p>قسم الذكاء الاصطناعي</p>
+                                            </div>
+                                        </div>
+                                        <p class="mock-post-body">شباب مين خلص مشروع الشبكات العملي؟ هل مطلوب نسلم ملفات السيسكو ولا بس ملف الـ Word؟</p>
+                                        <div class="mock-post-footer">
+                                            <span><i class="fa-regular fa-thumbs-up"></i> 14</span>
+                                            <span><i class="fa-regular fa-comment"></i> 8 تعليقات</span>
+                                        </div>
+                                    </div>
+                                    <div class="mock-post">
+                                        <div class="mock-post-header">
+                                            <div class="mock-user-avatar">م</div>
+                                            <div>
+                                                <h6>محمد خالد (طالب سنة 1)</h6>
+                                                <p>هندسة البرمجيات</p>
+                                            </div>
+                                        </div>
+                                        <p class="mock-post-body">سؤال بخصوص برمجة 2، متى موعد تسليم الواجب الثاني على المودل؟</p>
+                                        <div class="mock-post-footer">
+                                            <span><i class="fa-regular fa-thumbs-up"></i> 5</span>
+                                            <span><i class="fa-regular fa-comment"></i> 3 تعليقات</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- VIEW 5: PROFILE -->
+                            <div class="phone-view" id="view-profile">
+                                <div class="mock-profile-card">
+                                    <div class="mock-profile-avatar">S</div>
+                                    <h4>سليم أحمد</h4>
+                                    <p>طالب · هندسة البرمجيات (سنة 2)</p>
+                                    <span class="mock-status-pill">نشط ومفعل</span>
+                                </div>
+                                <div class="mock-profile-stats">
+                                    <div class="mock-stat-item">
+                                        <i class="fa-solid fa-fire text-warning"></i>
+                                        <div>
+                                            <h6>Streak</h6>
+                                            <p>12 يوم متتالي</p>
+                                        </div>
+                                    </div>
+                                    <div class="mock-stat-item">
+                                        <i class="fa-solid fa-list-check text-primary"></i>
+                                        <div>
+                                            <h6>المهام</h6>
+                                            <p>18 واجب منجز</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mock-menu-list">
+                                    <div class="mock-menu-item"><i class="fa-solid fa-calculator"></i><span>حاسبة المعدل الأكاديمي</span></div>
+                                    <div class="mock-menu-item"><i class="fa-solid fa-chart-line"></i><span>توقعات المعدل (What-if)</span></div>
+                                </div>
+                            </div>
+
+                            <!-- Persistent Bottom Nav Bar -->
+                            <div class="phone-bottom-nav">
+                                <div class="phone-nav-item active" data-target="home"><i class="fa-solid fa-house"></i><span>الرئيسية</span></div>
+                                <div class="phone-nav-item" data-target="courses"><i class="fa-solid fa-book-open"></i><span>المساقات</span></div>
+                                <div class="phone-nav-item" data-target="chat"><i class="fa-solid fa-robot"></i><span>المساعد</span></div>
+                                <div class="phone-nav-item" data-target="forum"><i class="fa-solid fa-comments"></i><span>المنتدى</span></div>
+                                <div class="phone-nav-item" data-target="profile"><i class="fa-solid fa-user"></i><span>حسابي</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>قالوا عن <span class="gradient-text">UP-Smart</span></h2>
+                <p>تجارب وآراء حقيقية من زملاء الكلية الذين استخدموا التطبيق واعتمدوا عليه في مسيرتهم الدراسية.</p>
+            </div>
+            <div class="testimonials-grid" style="max-width: 900px; margin: 40px auto 0 auto;">
+                <div class="testimonial-card glass-card reveal">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <p class="testimonial-text">"التطبيق مريح جداً، ووفّر عليّ اللخمة الكبيرة اللي بتصير كل فصل وأنا بدور على ملفات المواد والملخصات في الجوال. كل شي مرتّب بمكان واحد وسهل الوصول إله."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ط</div>
+                        <div class="author-info">
+                            <h4>طالبة بالكلية</h4>
+                            <span>هندسة البرمجيات والذكاء الاصطناعي</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-card reveal">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <p class="testimonial-text">"أنا هلقيت معتمد على التطبيق بشكل كبير في يومي الدراسي، وريّحني تماماً من قصة الدخول كل شوية للويبينار وبوابة الطالب أو تتبع جروبات الواتساب المليانة تشتيت."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ط</div>
+                        <div class="author-info">
+                            <h4>طالب بالكلية</h4>
+                            <span>هندسة البرمجيات والذكاء الاصطناعي</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curated Training Resources Showcase -->
+    <section class="trainings-section" id="trainings">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>أقسام التدريب والدورات <span class="gradient-text">المتاحة بالتطبيق</span></h2>
+                <p>معرض استكشافي للدورات التدريبية المعتمدة مجاناً من كبرى المنصات التقنية لزيادة جودة مهاراتك البرمجية والمهنية.</p>
+            </div>
+            
+            <!-- Category Tabs -->
+            <div class="filter-tabs reveal" id="trainingCategoryTabs">
+                <button class="filter-btn active" data-category="all">الكل</button>
+                <button class="filter-btn" data-category="تطوير الويب">تطوير الويب</button>
+                <button class="filter-btn" data-category="الذكاء الاصطناعي">الذكاء الاصطناعي</button>
+                <button class="filter-btn" data-category="أساسيات برمجة">أساسيات برمجة</button>
+                <button class="filter-btn" data-category="بايثون">بايثون</button>
+                <button class="filter-btn" data-category="Git وGitHub">Git وGitHub</button>
+            </div>
+
+            <!-- Training Cards Grid -->
+            <div class="training-grid" id="trainingGrid">
+                <!-- Populated dynamically via JS with gated prompt action buttons -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Registered Academic Courses Showcase -->
+    <section class="courses-section" id="courses">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>دليل مساقات الكلية <span class="gradient-text">التفاعلي</span></h2>
+                <p>نماذج من المساقات الأكاديمية الحقيقية لكلية هندسة البرمجيات والذكاء الاصطناعي. حمّل التطبيق للاطلاع على كامل المجلدات وشروحاتها.</p>
+            </div>
+
+            <!-- Courses Grid -->
+            <div class="courses-grid" id="coursesGrid">
+                <!-- Populated dynamically via JS with gated prompt action buttons -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>الأسئلة <span class="gradient-text">الشائعة</span></h2>
+                <p>إجابات سريعة لأهم التساؤلات حول تطبيق UP-Smart وكيفية الاستفادة القصوى منه.</p>
+            </div>
+            
+            <div class="faq-accordion reveal">
+                <div class="faq-item">
+                    <button class="faq-question">هل التطبيق مجاني بالكامل؟ <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>نعم، التطبيق مجاني بنسبة 100% ولا يحتوي على أي إعلانات مزعجة. تم تطويره كمبادرة طلابية لخدمة زملائنا بالكلية لتسهيل مسيرتهم الأكاديمية.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">هل يحتاج لإنترنت ليعمل؟ <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>الميزات الأساسية تحتاج إنترنت لجلب البيانات وتحديثها، لكن التطبيق يخزن جداولك وتنبيهاتك محلياً (Offline)، مما يضمن وصول إشعارات المحاضرات والمهام حتى لو لم تكن متصلاً.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">هل يتوفر لأجهزة الآيفون (iOS)؟ <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>حالياً يتوفر بصيغة APK للأندرويد، ولكننا وفرنا "نسخة ويب" (Web App - PWA) سريعة وممتازة. يمكنك فتح الموقع بمتصفح سفاري وإضافته للشاشة الرئيسية ليعمل كتطبيق أصلّي تماماً على الآيفون.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">كيف أحدث التطبيق مستقبلاً؟ <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>عند توفر نسخة أحدث وأكثر استقراراً، سيصلك تنبيه داخل التطبيق. ويمكنك دائماً زيارة هذه الصفحة لتحميل أحدث إصدار من الروابط المباشرة بالأسفل.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section (Direct APK & Web App Option) -->
+    <section class="download-section" id="download">
+        <div class="container download-container glass-card reveal">
+            <div class="download-text">
+                <div class="dl-header-logo-row">
+                    <img src="assets/images/app_icon.png" alt="أيقونة تطبيق UP-Smart" class="dl-app-icon">
+                    <div>
+                        <h2>احصل على تطبيق <span class="gradient-text">UP-Smart</span> بالمنصة المفضلة</h2>
+                        <p>حمّل التطبيق الأصلي مباشرة لهاتفك الأندرويد، أو استخدم نسخة الويب أب (Web App) المثبتة على شاشتك.</p>
+                    </div>
+                </div>
+                
+                <!-- Download Cards Row -->
+                <div class="dl-methods-grid">
+                    <!-- Method 1: APK Direct -->
+                    <div class="dl-method-card glass-card">
+                        <h3>نسخة الأندرويد (APK المباشر)</h3>
+                        <p>مثالية لأجهزة أندرويد لتشغيل التنبيهات الموقوتة والواجبات محلياً بدون إنترنت.</p>
+                        <div class="method-meta">
+                            <span><i class="fa-solid fa-weight-hanging"></i> 24.1 ميغابايت</span>
+                            <span><i class="fa-solid fa-circle-check text-success"></i> آمن بالكامل</span>
+                        </div>
+                        <a href="https://up-smart-app.web.app/upsmart.apk" download class="btn btn-gradient btn-full">
+                            <i class="fa-solid fa-circle-down"></i>
+                            تحميل ملف APK مباشر
+                        </a>
+                    </div>
+                    
+                    <!-- Method 2: Web App PWA -->
+                    <div class="dl-method-card glass-card">
+                        <h3>نسخة الويب أب (Web App - PWA)</h3>
+                        <p>مناسبة لطلاب الآيفون (iOS) واللابتوب. تفتح مباشرة بالمتصفح كنسخة تطبيق سريعة.</p>
+                        <div class="method-meta">
+                            <span><i class="fa-solid fa-link"></i> up-smart-app.web.app</span>
+                            <span><i class="fa-solid fa-cloud-bolt text-success"></i> تثبيت فوري</span>
+                        </div>
+                        <a href="https://up-smart-app.web.app" target="_blank" class="btn btn-outline btn-full">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                            الدخول لنسخة الويب
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Web App Installation Guide -->
+                <div class="pwa-install-guide glass-card">
+                    <h4>💡 دليل تثبيت نسخة الويب وتفعيل الإشعارات:</h4>
+                    <div class="pwa-steps">
+                        <div class="pwa-step">
+                            <i class="fa-solid fa-bell-slash text-warning"></i>
+                            <div>
+                                <strong>تفعيل التنبيهات:</strong>
+                                <span>عند فتح نسخة الويب لأول مرة، سيطلب منك المتصفح الإذن بإرسال الإشعارات. اختر <strong>"سماح (Allow)"</strong> لكي تستقبل إشعارات الواجبات والامتحانات والجدول فور صدورها.</span>
+                            </div>
+                        </div>
+                        <div class="pwa-step">
+                            <i class="fa-brands fa-safari text-primary"></i>
+                            <div>
+                                <strong>طريقة التثبيت على الآيفون (Safari):</strong>
+                                <span>افتح الموقع بسفاري، اضغط على زر <strong>المشاركة <i class="fa-solid fa-share-nodes"></i></strong> بالأسفل، ثم اختر <strong>"إضافة إلى الشاشة الرئيسية (Add to Home Screen)"</strong> ليعمل كتطبيق مستقل.</span>
+                            </div>
+                        </div>
+                        <div class="pwa-step">
+                            <i class="fa-brands fa-chrome text-success"></i>
+                            <div>
+                                <strong>طريقة التثبيت على الأندرويد والكمبيوتر (Chrome):</strong>
+                                <span>اضغط على <strong>النقاط الثلاث ⠇</strong> بأعلى المتصفح، ثم اختر <strong>"إضافة إلى الشاشة الرئيسية"</strong> أو <strong>"تثبيت التطبيق (Install App)"</strong>.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="download-qr">
+                <div class="qr-box glass-card">
+                    <div class="qr-code">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://up-smart-app.web.app/upsmart.apk" alt="QR Code" class="qr-svg" style="width: 100px; height: 100px; border-radius: 8px;">
+                    </div>
+                    <p>امسح الكود بكاميرا هاتفك لتحميل الـ APK مباشرة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gated Content Modal Overlay (Glassmorphism Modal Prompt) -->
+    <div class="modal-overlay" id="gatedModal">
+        <div class="modal-content glass-card">
+            <button class="modal-close" id="closeModal" aria-label="إغلاق النافذة">&times;</button>
+            <div class="modal-icon">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <h3>المحتوى متوفر داخل التطبيق 📱</h3>
+            <p>لضمان تجربة تعليمية مركزة وخالية من المشتتات، وبناءً على سياسات المحتوى الأكاديمي، يتم تصفح المحاضرات، الملفات المرفقة، وروابط مجموعات واتساب وتليجرام حصرياً من داخل تطبيق الهاتف المحمول أو نسخة الويب أب.</p>
+            <div class="modal-actions-row">
+                <a href="#download" class="btn btn-gradient btn-full" id="modalDownloadTrigger">
+                    <i class="fa-solid fa-circle-down"></i>
+                    تنزيل التطبيق أو الدخول للويب
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTopBtn" aria-label="العودة للأعلى">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <div class="logo-area">
+                    <div class="logo-box">
+                        <img src="assets/images/app_icon.png" alt="شعار UP-Smart" class="logo-img">
+                    </div>
+                    <h2>UP-Smart</h2>
+                </div>
+                <p>تطبيق الطالب الذكي لجامعة فلسطين. مصمم خصيصاً لمساعدة طلاب كلية هندسة البرمجيات والذكاء الاصطناعي في إدارة شؤونهم الأكاديمية والتفاعل بذكاء.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <a href="#hero">الرئيسية</a>
+                <a href="#features">الميزات</a>
+                <a href="#simulator-section">المحاكي التفاعلي</a>
+                <a href="#trainings">الدورات التدريبية</a>
+                <a href="#courses">المساقات</a>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>التواصل مع المطور</h4>
+                <p>للاستفسارات التقنية أو تقديم اقتراح:</p>
+                <div class="contact-details">
+                    <a href="https://wa.me/972593246643" target="_blank" class="contact-item">
+                        <i class="fa-brands fa-whatsapp success-color"></i>
+                        <span>أ. محمد النويري (واتساب)</span>
+                    </a>
+                    <a href="https://instagram.com/mohammed.alnwerie" target="_blank" class="contact-item">
+                        <i class="fa-brands fa-instagram instagram-color"></i>
+                        <span>@mohammed.alnwerie</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 تطبيق UP-Smart. جميع الحقوق محفوظة لجامعة فلسطين.</p>
+            <p class="tagline-footer">تم التطوير والإعداد بكل شغف لخدمة زملائنا الطلاب 💻✨</p>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript File -->
+    <script src="app.js"></script>
+</body>
+</html>
