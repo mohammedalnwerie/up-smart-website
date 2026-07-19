@@ -429,6 +429,7 @@ a {
     padding-top: 160px;
     padding-bottom: 100px;
     position: relative;
+    overflow: hidden;
 }
 
 .hero-container {
@@ -2358,15 +2359,37 @@ a {
         flex-direction: column;
         gap: 12px;
     }
+    
+    /* Hero Floating Cards Mobilization (Vertical Stack) */
+    .floating-cards-container {
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: center !important;
+        perspective: none !important;
+        transform-style: flat !important;
+        transform: none !important;
+        margin: 40px auto 0 auto !important;
+        max-width: 320px !important;
+    }
+    
+    .floating-card {
+        position: relative !important;
+        top: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        transform: none !important;
+        animation: none !important;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3) !important;
+        background: rgba(13, 26, 56, 0.85) !important;
+    }
 }
 
 @media (max-width: 576px) {
-    .floating-cards-container {
-        transform: scale(0.85);
-        height: 330px;
-        margin-bottom: 20px;
-    }
-    
     .hero-stats {
         gap: 20px;
         justify-content: space-between;
@@ -2395,11 +2418,6 @@ a {
 }
 
 @media (max-width: 400px) {
-    .floating-cards-container {
-        transform: scale(0.7);
-        height: 270px;
-    }
-    
     .hero-content h1 {
         font-size: 28px;
     }
