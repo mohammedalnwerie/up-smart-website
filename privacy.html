@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="سياسة الخصوصية لتطبيق UP-Smart — الرفيق الأكاديمي الذكي لطلاب كلية هندسة البرمجيات والذكاء الاصطناعي بجامعة فلسطين.">
+    <meta name="author" content="محمد النويري">
+    <title>سياسة الخصوصية — تطبيق UP-Smart</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .policy-wrap {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 140px 24px 100px;
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.9;
+        }
+        .policy-wrap h1 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            margin-bottom: 8px;
+        }
+        .policy-wrap .updated {
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+        .policy-wrap h2 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            margin: 40px 0 14px;
+            color: var(--primary-light);
+            border-inline-start: 3px solid var(--primary);
+            padding-inline-start: 12px;
+        }
+        .policy-wrap p, .policy-wrap li {
+            color: var(--text-primary);
+            opacity: 0.92;
+            margin-bottom: 10px;
+        }
+        .policy-wrap ul {
+            padding-inline-start: 22px;
+            margin-bottom: 16px;
+        }
+        .policy-wrap .note-box {
+            background: var(--card-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: 14px;
+            padding: 18px 20px;
+            margin: 20px 0;
+        }
+        .policy-wrap .note-box.good { border-color: rgba(39,150,99,0.4); }
+        .policy-wrap strong { color: #fff; }
+        .policy-wrap a { color: var(--accent-cyan); }
+    </style>
+</head>
+<body>
+    <div class="grid-overlay"></div>
+    <div class="aurora aurora-1"></div>
+    <div class="aurora aurora-2"></div>
+
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo-area">
+                <div class="logo-box">
+                    <img src="assets/images/app_icon.png" alt="شعار UP-Smart" class="logo-img">
+                </div>
+                <div class="logo-title">
+                    <h2>UP-Smart</h2>
+                    <p>جامعة فلسطين</p>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="index.html#download">تنزيل التطبيق</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="policy-wrap">
+        <h1>سياسة الخصوصية</h1>
+        <p class="updated">آخر تحديث: يوليو 2026 — تطبيق UP-Smart، الإصدار 1.4.8</p>
+
+        <p>
+            تطبيق <strong>UP-Smart</strong> منصة أكاديمية غير رسمية طوّرها المهندس محمد النويري لخدمة طلاب
+            كلية هندسة البرمجيات والذكاء الاصطناعي في جامعة فلسطين، بهدف تنظيم الجدول الدراسي والإشعارات
+            والمحتوى التدريبي في مكان واحد. نأخذ خصوصية بياناتك بجدية، وهذه الصفحة توضّح بالضبط ما الذي
+            يجمعه التطبيق ولماذا.
+        </p>
+
+        <div class="note-box good">
+            <strong>الأهم أولاً:</strong> التطبيق <strong>لا يطلب ولا يخزّن كلمة مرور حسابك على منصة الموودل
+            (Moodle)</strong> أو أي حساب جامعي آخر إطلاقاً، ولا يبيع بياناتك لأي طرف ثالث لأي غرض تسويقي.
+        </div>
+
+        <h2>١. البيانات التي نجمعها</h2>
+        <ul>
+            <li><strong>بيانات الحساب:</strong> الاسم، الرقم الجامعي، التخصص/البرنامج الأكاديمي، وكلمة مرور
+                مشفّرة عبر خدمة Firebase Authentication (لا نراها ولا نخزّنها كنص صريح). لا نطلب أي بريد
+                إلكتروني شخصي — الرقم الجامعي هو معرّف الدخول الوحيد.</li>
+            <li><strong>صورة الملف الشخصي:</strong> إذا اخترت رفع صورة، تُخزَّن عبر Firebase Storage. رفعها
+                اختياري بالكامل.</li>
+            <li><strong>محتوى الاستخدام:</strong> الجدول الدراسي، الإشعارات والإعلانات التي تتفاعل معها،
+                وتقدّمك في الدورات التدريبية داخل التطبيق.</li>
+            <li><strong>محادثات المساعد الذكي:</strong> الرسائل التي ترسلها للمساعد الذكي داخل التطبيق تُعالَج
+                عبر خدمة Firebase AI Logic (المبنية على نماذج Gemini من Google) لتوليد الردود، ولا تُستخدم من
+                طرفنا لأي غرض آخر.</li>
+            <li><strong>رمز الجهاز للإشعارات (FCM Token):</strong> لإرسال إشعارات الأخبار والمواعيد المهمة لك.</li>
+            <li><strong>بيانات محلية على جهازك فقط:</strong> إذا فعّلت "تذكرني"، تُحفظ بيانات الدخول مشفّرة
+                داخل مساحة آمنة على جهازك (Secure Storage)، ولا تُرسل لأي خادم إلا عند تسجيل الدخول نفسه.</li>
+            <li><strong>معلومات تقنية عامة:</strong> إصدار التطبيق ونوع الجهاز، لأغراض الدعم الفني وتحسين الأداء فقط.</li>
+        </ul>
+
+        <h2>٢. كيف نستخدم بياناتك</h2>
+        <ul>
+            <li>تشغيل ميزات التطبيق الأساسية: الجدول، الإشعارات، الدورات التدريبية، المساعد الذكي.</li>
+            <li>عرض المحتوى المناسب لتخصّصك الأكاديمي فقط.</li>
+            <li>التواصل معك بخصوص تحديثات مهمة أو دعم فني عند الحاجة.</li>
+            <li>تحسين أداء التطبيق وإصلاح الأعطال.</li>
+        </ul>
+
+        <h2>٣. أين تُخزَّن بياناتك</h2>
+        <p>
+            تُخزَّن جميع البيانات على خوادم <strong>Google Firebase</strong> (Google Cloud)، وهي الجهة
+            التقنية الوحيدة التي تُعالَج بياناتك من خلالها لتشغيل التطبيق. لا نشارك بياناتك مع أي جهة
+            إعلانية أو تجارية أخرى.
+        </p>
+
+        <h2>٤. صلاحيات الوصول للبيانات (للطاقم الإداري)</h2>
+        <p>
+            حسابات الأدمن (المشرفين على مساقات أو تخصصات محددة) تصل فقط للبيانات ضمن نطاق صلاحياتها
+            المحدّد مسبقاً (تخصص/كلية)، عبر قواعد أمان صارمة على مستوى قاعدة البيانات، ولا يمكنها الاطلاع
+            على بيانات طلاب خارج نطاقها.</p>
+
+        <h2>٥. حقوقك</h2>
+        <ul>
+            <li>يمكنك تعديل بيانات ملفك الشخصي في أي وقت من داخل التطبيق.</li>
+            <li>يمكنك طلب حذف حسابك وكل بياناتك المرتبطة به نهائياً بالتواصل معنا عبر البيانات أدناه.</li>
+            <li>يمكنك إلغاء صلاحية الإشعارات في أي وقت من إعدادات جهازك.</li>
+        </ul>
+
+        <h2>٦. الفئة العمرية</h2>
+        <p>
+            التطبيق موجّه لطلاب جامعيين، وغير موجّه للأطفال دون سن 13 عاماً، ولا نجمع بيانات عن هذه الفئة
+            عن علم.
+        </p>
+
+        <h2>٧. تغييرات على هذه السياسة</h2>
+        <p>
+            قد تُحدَّث هذه الصفحة من وقت لآخر مع تطوّر ميزات التطبيق. سيظهر تاريخ آخر تحديث دائماً أعلى
+            الصفحة.
+        </p>
+
+        <h2>٨. التواصل معنا</h2>
+        <p>لأي استفسار حول الخصوصية أو لطلب حذف حسابك:</p>
+        <div class="contact-details">
+            <a href="https://wa.me/972593246643" target="_blank" class="contact-item">
+                <i class="fa-brands fa-whatsapp success-color"></i>
+                <span>م. محمد النويري (واتساب)</span>
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 تطبيق UP-Smart. جميع الحقوق محفوظة لجامعة فلسطين.</p>
+        </div>
+    </footer>
+</body>
+</html>
