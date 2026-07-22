@@ -1402,6 +1402,52 @@ a {
 }
 
 /* --------------------------------------------------------------------------
+   10b. "Who is this for" — the four majors across both colleges
+   -------------------------------------------------------------------------- */
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.audience-card {
+    padding: 30px 22px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: var(--transition-smooth);
+}
+
+.audience-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(117, 146, 255, 0.25);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.audience-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.audience-college {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.audience-card h3 {
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
    11. Dedicated Simulator Section (Professional SaaS Layout)
    -------------------------------------------------------------------------- */
 .simulator-section {
@@ -2249,7 +2295,11 @@ a {
     .features-grid {
         grid-template-columns: 1fr 1fr;
     }
-    
+
+    .audience-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .simulator-container {
         grid-template-columns: 1fr;
         gap: 36px;
