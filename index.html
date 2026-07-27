@@ -34,6 +34,41 @@
 
     <meta name="theme-color" content="#050a15">
 
+    <!-- Structured data: tells Google this page IS an app (category, platform,
+         free) rather than a generic page — enables app-style rich results.
+         No aggregateRating here on purpose: we have no real ratings yet, and
+         inventing them violates Google's structured-data policy. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "UP-Smart",
+      "alternateName": "تطبيق UP-Smart",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Android, Web",
+      "inLanguage": "ar",
+      "isAccessibleForFree": true,
+      "description": "رفيق الطالب الأكاديمي في جامعة فلسطين: الجدول والواجبات والامتحانات في مكان واحد، مع تنبيه قبل كل موعد ومساعد ذكي ومنتدى طلابي.",
+      "url": "https://mohammedalnwerie.github.io/up-smart-website/",
+      "installUrl": "https://up-smart-app.web.app",
+      "image": "https://mohammedalnwerie.github.io/up-smart-website/assets/images/og-cover.png",
+      "screenshot": "https://mohammedalnwerie.github.io/up-smart-website/assets/images/og-cover.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "ILS"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "محمد النويري"
+      },
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      }
+    }
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

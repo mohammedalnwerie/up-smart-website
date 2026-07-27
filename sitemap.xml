@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Submit this to Google Search Console directly:
+    https://mohammedalnwerie.github.io/up-smart-website/sitemap.xml
+
+  Auto-discovery via robots.txt does NOT work here: this is a GitHub *project*
+  page, and crawlers only read robots.txt from the domain root
+  (mohammedalnwerie.github.io/robots.txt), which this repo cannot serve.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://mohammedalnwerie.github.io/up-smart-website/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://mohammedalnwerie.github.io/up-smart-website/privacy.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://mohammedalnwerie.github.io/up-smart-website/delete-account.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>
