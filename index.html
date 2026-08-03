@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Kept under ~160 chars so Google shows it whole instead of truncating. -->
-    <meta name="description" content="UP-Smart — رفيق الطالب الأكاديمي بجامعة فلسطين: جدولك وواجباتك وامتحاناتك بمكان واحد، مع تنبيه قبل كل موعد. جرّب نسخة الويب الآن.">
-    <meta name="keywords" content="UP-Smart, جامعة فلسطين, تطبيق طالب ذكي, هندسة برمجيات, ذكاء اصطناعي, نظم معلومات, وسائط متعددة, تكنولوجيا المعلومات, مساعد ذكي, منتدى طلابي">
+    <meta name="description" content="UP-Smart — رفيق الطالب الأكاديمي بجامعة فلسطين: اربط يوبينار وبوابة الطالب، وشوف جدولك ومعدلك ورسومك بمكان واحد مع تنبيه قبل كل موعد.">
+    <meta name="keywords" content="UP-Smart, جامعة فلسطين, تطبيق طالب ذكي, يوبينار, بوابة الطالب, معدل تراكمي, كشف علامات, هندسة برمجيات, ذكاء اصطناعي, نظم معلومات, وسائط متعددة, تكنولوجيا المعلومات, مساعد ذكي, منتدى طلابي">
     <meta name="author" content="محمد النويري">
     <title>تطبيق UP-Smart — الرفيق الأكاديمي الذكي لجامعة فلسطين</title>
 
@@ -21,7 +21,7 @@
     <meta property="og:locale" content="ar_AR">
     <meta property="og:url" content="https://mohammedalnwerie.github.io/up-smart-website/">
     <meta property="og:title" content="تطبيق UP-Smart — رفيقك الأكاديمي بجامعة فلسطين">
-    <meta property="og:description" content="جدولك وواجباتك وامتحاناتك بمكان واحد، مع تنبيه قبل كل موعد. جرّب نسخة الويب الآن.">
+    <meta property="og:description" content="اربط يوبينار وبوابة الطالب: جدولك ومعدلك ورسومك وعلاماتك بمكان واحد، مع تنبيه قبل كل موعد.">
     <meta property="og:image" content="https://mohammedalnwerie.github.io/up-smart-website/assets/images/og-cover.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -107,6 +107,7 @@
             <nav class="nav-links">
                 <a href="#hero">الرئيسية</a>
                 <a href="#features">الميزات</a>
+                <a href="#linking">الربط الجامعي</a>
                 <a href="#simulator-section">المحاكي التفاعلي</a>
                 <a href="#trainings">الدورات التدريبية</a>
                 <a href="#courses">المساقات الأكاديمية</a>
@@ -132,6 +133,7 @@
         <div class="drawer-links">
             <a href="#hero" class="drawer-link">الرئيسية</a>
             <a href="#features" class="drawer-link">الميزات</a>
+            <a href="#linking" class="drawer-link">الربط الجامعي</a>
             <a href="#simulator-section" class="drawer-link">المحاكي التفاعلي</a>
             <a href="#trainings" class="drawer-link">الدورات التدريبية</a>
             <a href="#courses" class="drawer-link">المساقات الأكاديمية</a>
@@ -277,6 +279,70 @@
                     </div>
                     <h3>أدوات تنبؤ المعدل</h3>
                     <p>حاسبة معدل ذكية مبنية على أسس دقيقة لتوقع معدلك الفصلي وتأثير درجاتك في المساقات الفردية على معدلك التراكمي العام.</p>
+                </div>
+
+                <!-- Feature 7 -->
+                <div class="feature-card glass-card reveal">
+                    <div class="feature-icon accent-teal">
+                        <i class="fa-solid fa-table-cells-large"></i>
+                    </div>
+                    <h3>ويدجت على شاشتك</h3>
+                    <p>ويدجت «التالي» يعرض أقرب امتحان أو تسليم والوقت المتبقي له، وأهم أربعة مساقات بنقطة حمراء على اللي عليه واجب — من غير ما تفتح التطبيق.</p>
+                </div>
+
+                <!-- Feature 8 -->
+                <div class="feature-card glass-card reveal">
+                    <div class="feature-icon accent-green">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3>شهاداتي</h3>
+                    <p>علّم الدورة التدريبية كمنجزة فيتكوّن لك سجل إنجاز يتراكم في ملفك الشخصي، مع ربط كل دورة بالمساق اللي تخدمه فعلاً.</p>
+                </div>
+
+                <!-- Feature 9 -->
+                <div class="feature-card glass-card reveal">
+                    <div class="feature-icon accent-orange">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <h3>تنبيه فترة التسجيل</h3>
+                    <p>يوصلك إشعار أول ما يفتح التسجيل الفصلي، وكم باقي على إغلاقه — بدل ما تعرف من صاحبك أو تعرف متأخر.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- University account linking — the app's biggest differentiator, and the
+         one that needs its privacy story told plainly on the page. -->
+    <section class="features-section" id="linking">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>اربط حسابك الجامعي <span class="gradient-text">مرة وحدة</span></h2>
+                <p>يوبينار وبوابة الطالب داخل التطبيق — جدولك ومعدلك ورسومك وعلاماتك في مكان واحد، بدون ما تفتح موقع وتسجّل دخول كل مرة.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card glass-card reveal">
+                    <div class="feature-icon accent-blue">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3>يوبينار</h3>
+                    <p>مساقاتك المسجَّلة وواجباتك وكويزاتك تنزل تلقائيًا لجدولك، بمواعيد الفتح والإغلاق الحقيقية. وزر واحد يفتحلك الامتحان على صفحته مباشرة.</p>
+                </div>
+
+                <div class="feature-card glass-card reveal">
+                    <div class="feature-icon accent-purple">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3>بوابة الطالب</h3>
+                    <p>معدلك التراكمي والساعات المجتازة، حالتك المالية، خطتك الدراسية و«شو باقي عليّ»، وكشف علاماتك فصلاً بفصل.</p>
+                </div>
+
+                <div class="feature-card glass-card reveal">
+                    <div class="feature-icon accent-green">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>كلمة مرورك ما بنشوفها</h3>
+                    <p>بتسجّل دخولك على صفحة الجامعة نفسها جوّا التطبيق. ما بنقرأ كلمة مرورك ولا بنخزّنها ولا بتمرّ على أي سيرفر إلنا — وبياناتك بتضل على جهازك، وبتقدر تفصل الربط بأي لحظة.</p>
                 </div>
             </div>
         </div>
@@ -869,6 +935,7 @@
                 <h4>روابط سريعة</h4>
                 <a href="#hero">الرئيسية</a>
                 <a href="#features">الميزات</a>
+                <a href="#linking">الربط الجامعي</a>
                 <a href="#simulator-section">المحاكي التفاعلي</a>
                 <a href="#trainings">الدورات التدريبية</a>
                 <a href="#courses">المساقات</a>
