@@ -148,7 +148,7 @@
             <div class="hero-content">
                 <div class="badge-new">
                     <i class="fa-solid fa-bolt"></i>
-                    <span>قيد التجهيز للنشر على Google Play — الإصدار <span class="app-version-txt">1.4.9</span></span>
+                    <span>متوفّر الآن على Google Play — الإصدار <span class="app-version-txt">1.5.0</span></span>
                 </div>
                 <h1>واجهتك الذكية لمستقبل <span class="gradient-text">برمجي واعد</span></h1>
                 <p class="hero-subtitle">تطبيق الهاتف المتكامل لطلاب كلية الهندسة وكلية تكنولوجيا المعلومات بجامعة فلسطين. يجمع دراستك، ومواعيدك، ومساعدك الإداري الذكي في يدك.</p>
@@ -766,7 +766,7 @@
                     <button class="faq-question">كيف أحدث التطبيق مستقبلاً؟ <i class="fa-solid fa-chevron-down"></i></button>
                     <div class="faq-answer">
                         <div class="answer-content">
-                            <p>عند توفر نسخة أحدث وأكثر استقراراً، سيصلك تنبيه داخل التطبيق. ويمكنك دائماً زيارة هذه الصفحة لتحميل أحدث إصدار من الروابط المباشرة بالأسفل.</p>
+                            <p>على أندرويد، التحديثات بتنزل تلقائياً من Google Play — ما بتحتاج تعمل إشي. ونسخة الويب بتتحدّث لحالها كل ما تفتحها.</p>
                         </div>
                     </div>
                 </div>
@@ -816,27 +816,33 @@
                     <img src="assets/images/app_icon.png" alt="أيقونة تطبيق UP-Smart" class="dl-app-icon">
                     <div>
                         <h2>احصل على تطبيق <span class="gradient-text">UP-Smart</span> بالمنصة المفضلة</h2>
-                        <p>استخدم نسخة الويب أب (Web App) المثبتة على شاشتك الآن، أو انتظر إصدار المتجر الرسمي قريباً.</p>
+                        <p>نزّله من Google Play إذا كان جوالك أندرويد، أو استخدم نسخة الويب أب (Web App) على الآيفون واللابتوب.</p>
                     </div>
                 </div>
                 
                 <!-- Download Cards Row -->
                 <div class="dl-methods-grid">
-                    <!-- Method 1: Google Play (in closed testing — link goes live at
-                         public release; the direct APK is paused until then) -->
+                    <!-- Method 1: Google Play — live since 2026-08-08.
+                         Deliberately the ONLY Android route offered. The direct
+                         APK is signed with Signature Scheme v2 only, which
+                         Android 6 cannot verify, so it fails to install on the
+                         older phones with a bare «لم يتم تثبيت التطبيق». Play
+                         re-signs per device from the bundle and handles those
+                         correctly — pointing at it is the fix, and it also
+                         means one artefact to keep current instead of two. -->
                     <div class="dl-method-card glass-card">
                         <h3>نسخة الأندرويد (Google Play)</h3>
-                        <p>التطبيق حالياً في مرحلة الاختبار النهائي على متجر Google Play، وسيكون متاحاً للتحميل للجميع قريباً بإذن الله.</p>
+                        <p>التطبيق متاح الآن على متجر Google Play. حمّله مباشرة، وبتوصلك التحديثات تلقائياً.</p>
                         <div class="method-meta">
-                            <span><i class="fa-brands fa-google-play"></i> قريباً على Google Play</span>
+                            <span><i class="fa-brands fa-google-play"></i> متوفّر على Google Play</span>
                             <span><i class="fa-solid fa-shield-halved text-success"></i> موثّق ومراجَع</span>
                         </div>
-                        <span class="btn btn-outline btn-full" style="opacity: .55; cursor: default; pointer-events: none;">
-                            <i class="fa-solid fa-hourglass-half"></i>
-                            قريباً على Google Play
-                        </span>
+                        <a href="https://play.google.com/store/apps/details?id=ps.edu.up.smart" target="_blank" rel="noopener" class="btn btn-gradient btn-full">
+                            <i class="fa-brands fa-google-play"></i>
+                            نزّله من Google Play
+                        </a>
                         <p style="font-size: 12.5px; margin-top: 10px; opacity: .75;">
-                            لحد ما ينزل على المتجر، استخدم نسخة الويب على اليمين — نفس الميزات وبتشتغل فوراً بدون تثبيت.
+                            يحتاج أندرويد 6.0 أو أحدث.
                         </p>
                     </div>
                     
@@ -887,9 +893,14 @@
             <div class="download-qr">
                 <div class="qr-box glass-card">
                     <div class="qr-code">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://up-smart-app.web.app" alt="QR Code" class="qr-svg" style="width: 100px; height: 100px; border-radius: 8px;">
+                        <!-- Points at Play, not the web app: a QR is scanned by
+                             a phone, and almost every phone here is Android. An
+                             iPhone that scans it still lands on a page that
+                             says so, which is a better dead end than an Android
+                             student landing on the web version by default. -->
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://play.google.com/store/apps/details?id=ps.edu.up.smart" alt="رمز QR لصفحة التطبيق على Google Play" class="qr-svg" style="width: 100px; height: 100px; border-radius: 8px;">
                     </div>
-                    <p>امسح الكود بكاميرا هاتفك لفتح نسخة الويب مباشرة</p>
+                    <p>امسح الكود بكاميرا جوالك لفتح التطبيق على Google Play</p>
                 </div>
             </div>
         </div>
