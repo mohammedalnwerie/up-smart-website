@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Source of assets/images/og-cover.png (the card WhatsApp/Telegram show for a
+     shared link). Render at exactly 1200x630, device scale 1, and screenshot the
+     viewport over og-cover.png. Not linked from the site; replaces make_og_cover.py. -->
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>og-cover</title>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@800;900&family=IBM+Plex+Sans+Arabic:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { background: #060B18; color: #F2F5FF; font-family: "IBM Plex Sans Arabic", sans-serif; position: relative;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><rect x='48' y='48' width='24' height='24' rx='4' transform='rotate(45 60 60)' fill='none' stroke='rgba(140,170,255,0.06)' stroke-width='1.5'/></svg>"); }
+  .a { position: absolute; border-radius: 50%; filter: blur(90px); }
+  .a1 { width: 520px; height: 520px; background: #14A6E8; opacity: .30; top: -180px; left: -80px; }
+  .a2 { width: 480px; height: 480px; background: #8E2A8B; opacity: .32; bottom: -220px; left: 260px; }
+  .copy { position: absolute; right: 80px; top: 0; bottom: 0; width: 640px; display: flex; flex-direction: column; justify-content: center; }
+  .brand { display: flex; align-items: center; gap: 16px; font: 800 34px Alexandria, sans-serif; margin-bottom: 30px; }
+  .brand img { width: 64px; height: 64px; border-radius: 16px; }
+  h1 { font: 900 72px/1.25 Alexandria, sans-serif; }
+  .mk { background: linear-gradient(110deg, #14A6E8, #8E2A8B 62%, #2A1F5E); padding: 0 .2em .04em; border-radius: .18em; }
+  p { color: #B4C0DA; font-size: 27px; font-weight: 600; margin-top: 24px; }
+  .chips { display: flex; gap: 12px; margin-top: 30px; }
+  .chips span { font-size: 20px; font-weight: 700; padding: 8px 18px; border-radius: 99px; border: 1px solid rgba(126,166,255,.35); background: rgba(16,28,58,.6); }
+  .phone { position: absolute; left: 110px; top: 60px; width: 300px; aspect-ratio: 390/844; border-radius: 46px; background: #0B0F1C; padding: 11px;
+    box-shadow: 0 0 0 1.5px rgba(140,170,255,.3), 0 40px 90px -20px rgba(0,0,0,.7), 0 0 120px -10px rgba(20,166,232,.45);
+    transform: rotate(-6deg); }
+  .phone .s { width: 100%; height: 100%; border-radius: 36px; overflow: hidden; }
+  .phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+</style>
+</head>
+<body>
+  <i class="a a1"></i><i class="a a2"></i>
+  <div class="copy">
+    <div class="brand"><img src="assets/images/app_icon.png" alt="">UP-Smart</div>
+    <h1>جامعتك كلها<br><span class="mk">بتطبيق واحد</span></h1>
+    <p>مواعيدك · تسليمات يوبينار · مساقاتك · بوابة الطالب</p>
+    <div class="chips"><span>لطلاب الهندسة بجامعة فلسطين</span><span>مجاني</span></div>
+  </div>
+  <div class="phone"><div class="s"><img src="assets/images/screens/home.webp" alt=""></div></div>
+</body>
+</html>

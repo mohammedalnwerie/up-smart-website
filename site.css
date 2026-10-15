@@ -184,6 +184,26 @@ h1 { font: 900 clamp(2.6rem, 6vw, 4.6rem)/1.25 var(--display); margin: 22px 0 18
 .trust-list b { display: block; font: 700 1.05rem var(--display); margin-bottom: 2px; }
 .trust-list small { color: var(--mut); font-size: .95rem; }
 
+.timeline li.done::before { background: var(--mut); border-color: var(--mut); opacity: .6; }
+.timeline li.done .t-date, .timeline li.done b { color: var(--mut); }
+
+/* upinar automation */
+.up-in { display: grid; grid-template-columns: 1.1fr 1fr; gap: 50px; align-items: center; }
+.up-copy .soon-badge { padding: 6px 14px; border-radius: 99px; border: 1px dashed rgba(126, 166, 255, .4); font-size: .9rem; margin-bottom: 14px; }
+.up-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
+.up-list li { display: flex; gap: 16px; padding: 18px 20px; border-radius: 18px; background: var(--card); border: 1px solid var(--line); }
+.up-list li > span { width: 44px; height: 44px; border-radius: 13px; flex: none; display: grid; place-items: center; color: var(--cyan); background: rgba(43, 202, 217, .1); font-size: 1.2rem; }
+.up-list b { display: block; font: 700 1.05rem var(--display); margin-bottom: 2px; }
+.up-list small { color: var(--mut); font-size: .95rem; }
+.up-copy .fine { margin-top: 18px; font-size: .95rem; }
+
+/* class reps */
+.reps { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 40px; border-color: rgba(126, 166, 255, .3); }
+.reps .h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); }
+.reps-list { list-style: none; display: flex; flex-direction: column; gap: 8px; color: var(--mut); }
+.reps-list li { display: flex; gap: 10px; align-items: baseline; }
+.reps-list .ic { color: var(--cyan); transform: translateY(3px); }
+
 /* faq */
 .faq { margin-top: 34px; display: flex; flex-direction: column; gap: 12px; }
 .faq details { border: 1px solid var(--line); border-radius: 18px; background: var(--card); padding: 0 22px; transition: border-color .3s; }
@@ -220,7 +240,8 @@ h1 { font: 900 clamp(2.6rem, 6vw, 4.6rem)/1.25 var(--display); margin: 22px 0 18
 
 /* responsive */
 @media (max-width: 980px) {
-  .hero-in, .show-in, .trust-in { grid-template-columns: 1fr; }
+  .hero-in, .show-in, .trust-in, .up-in { grid-template-columns: 1fr; }
+  .reps { flex-direction: column; align-items: flex-start; }
   .hero { padding-top: 110px; }
   .hero-copy { text-align: center; } .lead { margin-inline: auto; } .ctas, .chips { justify-content: center; }
   .hero-visual { height: 560px; }
