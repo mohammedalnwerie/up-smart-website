@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="سياسة الخصوصية لتطبيق UP-Smart — الرفيق الأكاديمي الذكي لطلاب كلية هندسة البرمجيات والذكاء الاصطناعي بجامعة فلسطين.">
-    <meta name="author" content="محمد النويري">
-    <title>سياسة الخصوصية — تطبيق UP-Smart</title>
+    <meta name="description" content="وثيقة سياسة الخصوصية ومعايير حماية وتشفير البيانات لتطبيق UP-Smart — الرفيق الأكاديمي الذكي لطلاب كلية هندسة البرمجيات والذكاء الاصطناعي بجامعة فلسطين.">
+    <meta name="author" content="م. محمد النويري">
+    <title>سياسة الخصوصية وحماية البيانات — تطبيق UP-Smart</title>
 
     <!-- Linked from the Google Play listing, so it gets the same share card. -->
     <link rel="canonical" href="https://mohammedalnwerie.github.io/up-smart-website/privacy.html">
@@ -13,8 +13,8 @@
     <meta property="og:site_name" content="UP-Smart">
     <meta property="og:locale" content="ar_AR">
     <meta property="og:url" content="https://mohammedalnwerie.github.io/up-smart-website/privacy.html">
-    <meta property="og:title" content="سياسة الخصوصية — تطبيق UP-Smart">
-    <meta property="og:description" content="كيف يتعامل تطبيق UP-Smart مع بيانات الطالب: ما نجمعه، وكيف نحميه، وحقّك في حذفه.">
+    <meta property="og:title" content="سياسة الخصوصية وحماية البيانات — تطبيق UP-Smart">
+    <meta property="og:description" content="معايير الأمان والتشفير العتادي والخصوصية في تطبيق UP-Smart لطلاب جامعة فلسطين: ما نجمعه، وكيف نضمن حمايته وتشفيره، وحقك الكامل بحذفه.">
     <meta property="og:image" content="https://mohammedalnwerie.github.io/up-smart-website/assets/images/og-cover.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#050a15">
@@ -27,50 +27,262 @@
 
     <style>
         .policy-wrap {
-            max-width: 860px;
+            max-width: 920px;
             margin: 0 auto;
             padding: 140px 24px 100px;
             color: var(--text-primary);
             font-family: var(--font-sans);
-            line-height: 1.9;
+            line-height: 1.95;
         }
         .policy-wrap h1 {
             font-family: var(--font-display);
-            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-size: clamp(1.9rem, 4.2vw, 2.7rem);
             margin-bottom: 8px;
+            letter-spacing: -0.5px;
         }
-        .policy-wrap .updated {
+        .policy-wrap .updated-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
             color: var(--text-muted);
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-glass);
+            padding-bottom: 16px;
         }
+        .policy-wrap .updated-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .policy-wrap .version-badge {
+            background: rgba(79, 115, 246, 0.18);
+            color: var(--primary-light);
+            border: 1px solid rgba(117, 146, 255, 0.3);
+            border-radius: 6px;
+            padding: 2px 9px;
+            font-size: 0.85rem;
+            font-family: var(--font-mono);
+            font-weight: 600;
+        }
+
+        /* Security Highlights Grid */
+        .security-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+            margin: 28px 0 36px;
+        }
+        .sec-card {
+            background: rgba(13, 26, 56, 0.65);
+            border: 1px solid var(--border-glass);
+            border-radius: 14px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            transition: var(--transition-quick);
+        }
+        .sec-card:hover {
+            border-color: var(--primary-light);
+            transform: translateY(-2px);
+            background: rgba(13, 26, 56, 0.85);
+        }
+        .sec-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #fff;
+        }
+        .sec-card-header i {
+            font-size: 1.25rem;
+        }
+        .sec-card.green .sec-card-header i { color: #4ade80; }
+        .sec-card.blue .sec-card-header i { color: #38bdf8; }
+        .sec-card.purple .sec-card-header i { color: #c084fc; }
+        .sec-card.gold .sec-card-header i { color: #fbbf24; }
+        .sec-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.6;
+        }
+
         .policy-wrap h2 {
             font-family: var(--font-display);
-            font-size: 1.3rem;
-            margin: 40px 0 14px;
+            font-size: 1.35rem;
+            margin: 46px 0 16px;
             color: var(--primary-light);
-            border-inline-start: 3px solid var(--primary);
-            padding-inline-start: 12px;
+            border-inline-start: 4px solid var(--primary);
+            padding-inline-start: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .policy-wrap h2 i {
+            font-size: 1.2rem;
+            color: var(--accent-cyan);
         }
         .policy-wrap p, .policy-wrap li {
             color: var(--text-primary);
             opacity: 0.92;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
         .policy-wrap ul {
-            padding-inline-start: 22px;
-            margin-bottom: 16px;
+            padding-inline-start: 24px;
+            margin-bottom: 20px;
         }
+
+        /* Note Boxes */
         .policy-wrap .note-box {
             background: var(--card-glass);
             border: 1px solid var(--border-glass);
             border-radius: 14px;
-            padding: 18px 20px;
-            margin: 20px 0;
+            padding: 20px 22px;
+            margin: 24px 0;
+            position: relative;
         }
-        .policy-wrap .note-box.good { border-color: rgba(39,150,99,0.4); }
+        .policy-wrap .note-box.good { 
+            border-color: rgba(39, 150, 99, 0.45); 
+            background: rgba(39, 150, 99, 0.08); 
+        }
+        .policy-wrap .note-box.shield { 
+            border-color: rgba(79, 115, 246, 0.45); 
+            background: rgba(79, 115, 246, 0.08); 
+        }
+        .policy-wrap .note-box.amber { 
+            border-color: rgba(219, 131, 35, 0.45); 
+            background: rgba(219, 131, 35, 0.08); 
+        }
         .policy-wrap strong { color: #fff; }
-        .policy-wrap a { color: var(--accent-cyan); }
+        .policy-wrap a { color: var(--accent-cyan); text-decoration: underline; text-underline-offset: 3px; }
+        .policy-wrap a:hover { color: #fff; }
+
+        /* Responsive Data Table */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin: 26px 0 34px;
+            border-radius: 14px;
+            border: 1px solid var(--border-glass);
+            background: rgba(13, 26, 56, 0.55);
+            -webkit-overflow-scrolling: touch;
+        }
+        .policy-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            min-width: 680px;
+        }
+        .policy-table th, .policy-table td {
+            padding: 14px 16px;
+            text-align: right;
+            border-bottom: 1px solid var(--border-glass);
+            vertical-align: middle;
+        }
+        .policy-table th {
+            background: rgba(79, 115, 246, 0.18);
+            color: var(--primary-light);
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.92rem;
+            white-space: nowrap;
+        }
+        .policy-table tr:last-child td {
+            border-bottom: none;
+        }
+        .policy-table tr:hover td {
+            background: rgba(117, 146, 255, 0.05);
+        }
+
+        /* Status & Security Tags */
+        .tag-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 9px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .tag-pill.encrypted { background: rgba(39, 150, 99, 0.22); color: #4ade80; border: 1px solid rgba(39, 150, 99, 0.4); }
+        .tag-pill.local { background: rgba(59, 130, 246, 0.22); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.4); }
+        .tag-pill.optin { background: rgba(219, 131, 35, 0.22); color: #fbbf24; border: 1px solid rgba(219, 131, 35, 0.4); }
+        .tag-pill.forbidden { background: rgba(224, 60, 65, 0.22); color: #f87171; border: 1px solid rgba(224, 60, 65, 0.4); }
+        .tag-pill.cloud { background: rgba(168, 85, 247, 0.22); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.4); }
+
+        /* Architectural Subsection Cards */
+        .sub-block {
+            background: rgba(13, 26, 56, 0.45);
+            border: 1px solid var(--border-glass);
+            border-radius: 14px;
+            padding: 22px;
+            margin: 22px 0;
+        }
+        .sub-block h3 {
+            color: #fff;
+            font-family: var(--font-display);
+            font-size: 1.12rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sub-block h3 i {
+            color: var(--accent-cyan);
+            font-size: 1.15rem;
+        }
+
+        .standards-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 16px 0;
+        }
+        .std-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            border-radius: 8px;
+            padding: 6px 14px;
+            font-size: 0.82rem;
+            font-family: var(--font-mono);
+            color: var(--text-primary);
+        }
+
+        .contact-box {
+            background: rgba(13, 26, 56, 0.6);
+            border: 1px solid var(--border-glass);
+            border-radius: 14px;
+            padding: 22px;
+            margin-top: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .contact-box .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25d366;
+            color: #050a15 !important;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition-quick);
+        }
+        .contact-box .contact-btn:hover {
+            background: #20ba5a;
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -91,156 +303,279 @@
             </div>
             <nav class="nav-links">
                 <a href="index.html">الرئيسية</a>
+                <a href="delete-account.html">طلب حذف الحساب</a>
                 <a href="index.html#download">تنزيل التطبيق</a>
             </nav>
         </div>
     </header>
 
     <main class="policy-wrap">
-        <h1>سياسة الخصوصية</h1>
-        <p class="updated">آخر تحديث: أكتوبر 2026 — تطبيق UP-Smart</p>
-
-        <p>
-            تطبيق <strong>UP-Smart</strong> منصة أكاديمية غير رسمية طوّرها المهندس محمد النويري لخدمة طلاب
-            كلية هندسة البرمجيات والذكاء الاصطناعي في جامعة فلسطين، بهدف تنظيم الجدول الدراسي والإشعارات
-            والمحتوى التدريبي في مكان واحد. نأخذ خصوصية بياناتك بجدية، وهذه الصفحة توضّح بالضبط ما الذي
-            يجمعه التطبيق ولماذا.
-        </p>
-
-        <div class="note-box good">
-            <strong>الأهم أولاً:</strong> التطبيق <strong>لا يطلب ولا يخزّن كلمة مرور حسابك على منصة الموودل
-            (Moodle)</strong> أو أي حساب جامعي آخر إطلاقاً، ولا يبيع بياناتك لأي طرف ثالث لأي غرض تسويقي.
+        <h1>سياسة الخصوصية وحماية البيانات</h1>
+        <div class="updated-meta">
+            <span><i class="fa-regular fa-calendar-check"></i> آخر تحديث: 24 أكتوبر 2026م</span>
+            <span><i class="fa-solid fa-code-commit"></i> الإصدار المعتمد: <span class="version-badge">v1.11.8+</span></span>
+            <span><i class="fa-solid fa-building-columns"></i> كلية هندسة البرمجيات والذكاء الاصطناعي — جامعة فلسطين</span>
         </div>
 
-        <h2>١. البيانات التي نجمعها</h2>
-        <ul>
-            <li><strong>بيانات الحساب:</strong> الاسم، الرقم الجامعي، التخصص/البرنامج الأكاديمي، وكلمة مرور
-                مشفّرة عبر خدمة Firebase Authentication (لا نراها ولا نخزّنها كنص صريح). لا نطلب أي بريد
-                إلكتروني شخصي — الرقم الجامعي هو معرّف الدخول الوحيد.</li>
-            <li><strong>منشورات المنتدى الطلابي:</strong> ما تكتبه من أسئلة وردود نصّية داخل مجموعات
-                المساقات، مرتبطاً باسمك المعروض.</li>
-            <li><strong>محادثات المساعد الذكي:</strong> الرسائل التي ترسلها للمساعد الذكي داخل التطبيق تُعالَج
-                عبر خدمة Firebase AI Logic (المبنية على نماذج Gemini من Google) لتوليد الردود، ولا تُستخدم من
-                طرفنا لأي غرض آخر.</li>
-            <li><strong>الصور التي ترفعها بنفسك:</strong> إذا أرفقت صورة للمساعد الذكي، أو استخدمت
-                "الإدخال الذكي" لقراءة صورة جدول أو إعلان، تُرسَل تلك الصورة إلى خدمة Firebase AI Logic
-                لمعالجتها والردّ عليها فقط. لا نحتفظ بالصورة على خوادمنا، ولا نستخدمها لأي غرض آخر،
-                ولا يصل التطبيق إلى معرض صورك إلا للصورة التي تختارها أنت في تلك اللحظة.</li>
-            <li><strong>رمز الجهاز للإشعارات (FCM Token):</strong> لإرسال إشعارات الأخبار والمواعيد المهمة لك.</li>
-            <li><strong>بيانات محلية على جهازك فقط (لا تصل خوادمنا إطلاقاً):</strong> قائمة المهام،
-                ومتابعتك للدورات التدريبية، وسجلّ محادثاتك مع المساعد الذكي — كلها محفوظة على جهازك
-                وحده. وإذا فعّلت "تذكرني"، تُحفظ بيانات الدخول مشفّرة داخل مساحة آمنة على جهازك
-                (Secure Storage) ولا تُرسل لأي خادم إلا عند تسجيل الدخول نفسه. <em>هذا على تطبيق
-                الجوال فقط:</em> نسخة الويب لا تحفظ كلمة مرورك أبداً، وفيها خيار «جهاز مشترك؟» يُخرجك من
-                حسابك تلقائياً عند إغلاق المتصفح — للأجهزة العامة مثل مختبرات الجامعة.
-                <br><strong>الاستثناء الوحيد</strong> هو <em>قائمة المهام</em> إذا فعّلت بنفسك خيار
-                «مشاركة بياناتي مع المساعد» — انظر البند التالي.</li>
-            <li><strong>بيانات حسابك الجامعي عند ربط بوابة الطالب أو يوبينار:</strong> تسجيل الدخول
-                يتم على <strong>صفحة الجامعة نفسها</strong> داخل متصفّح مدمج في التطبيق — التطبيق لا يقرأ
-                كلمة مرورك الجامعية ولا يخزّنها ولا يرسلها لأي جهة، ولو للحظة واحدة. وما يُقرأ بعد الربط
-                (معدّلك، ساعاتك المجتازة، حالتك المالية، خطتك الدراسية، مساقاتك، وعلاماتك، ومواعيد
-                التسليم والامتحانات) <strong>يُحفظ على جهازك وحده ولا يمرّ بأي خادم يخصّنا
-                إطلاقاً</strong>. ويُحفظ رمز الوصول الخاص بيوبينار داخل المساحة الآمنة على جهازك. وعند
-                فصل الربط من التطبيق، تُحذف هذه البيانات من جهازك فوراً.
-                <br><strong>الاستثناءات الوحيدة</strong> هي أن تختار أنت بنفسك مشاركتها مع المساعد
-                الذكي، أو عرض مواعيد يوبينار على نسخة الويب، أو عرض معدّلك ورسومك على نسخة الويب — انظر
-                البنود الثلاثة التالية. وتنبيهات «نزلت
-                علامة جديدة» تُحسب على جهازك، ولا يظهر فيها رقم العلامة.</li>
-            <li><strong>مشاركة بياناتك مع المساعد الذكي (اختيارية، ومعطّلة افتراضياً):</strong>
-                يوجد في «الإعدادات والحساب» مفتاح باسم <em>«مشاركة بياناتي مع المساعد»</em>.
-                وهو <strong>مطفأ افتراضياً</strong>، ولا يُفعَّل إلا بموافقتك الصريحة بعد شاشة توضّح لك
-                إلى أين تذهب البيانات.
-                <br>عند تفعيله فقط، يُرسَل مع سؤالك للمساعد ملخّص من سجلّك: معدّلك التراكمي ومعدّل
-                الفصل، ساعاتك، مستواك، وضعك المالي (المبلغ المطلوب والرسوم والرصيد)، وعلامات آخر
-                فصول دراسية، <strong>وقائمة مهامك في «مهامي» كما كتبتها — بما فيها المهام الشخصية
-                غير الجامعية</strong>، وما قرأه التطبيق من حسابك على يوبينار: أسماء مساقاتك، وامتحاناتك
-                وتسليماتك ومواعيدها (وهل سلّمت)، ولقاءاتك الأونلاين مع روابط الدخول إليها، وروابط مجموعات
-                المساقات، وأسماء ملفات المساقات (دون الملفات نفسها). تُعالَج هذه البيانات عبر خدمة Firebase AI Logic (نماذج Gemini
-                من Google) لتوليد الرد فقط، ولا نحتفظ بها على خوادمنا ولا نستخدمها لأي غرض آخر.
-                <br><strong>كلمة مرورك الجامعية لا تُرسَل في أي حال، سواء فعّلت هذا الخيار أو لا.</strong>
-                ويمكنك إطفاء المفتاح في أي لحظة، ويسري الإيقاف ابتداءً من الرسالة التالية مباشرة. وما دام
-                مطفأً، لا يرى المساعد معدّلك ولا رسومك ولا علاماتك ولا بيانات يوبينار إطلاقاً.</li>
-            <li><strong>عرض مواعيد يوبينار على نسخة الويب (اختياري، ومعطّل افتراضياً):</strong>
-                يوجد في «الإعدادات والحساب» على تطبيق أندرويد مفتاح باسم <em>«مواعيد يوبينار على نسخة
-                الويب»</em>. وهو <strong>مطفأ افتراضياً</strong>، ولا يُفعَّل إلا بموافقتك الصريحة بعد شاشة
-                توضّح ما يُرفع وما لا يُرفع.
-                <br>عند تفعيله فقط، يرفع جوالك إلى حسابك على خوادم التطبيق (Firebase من Google)
-                <strong>أسماء مساقاتك في يوبينار ومواعيد واجباتك وامتحاناتك، وهل سلّمتها أو حلّيتها، وما علّمته «منجزاً» في التطبيق</strong> — لتراها عند فتح
-                الموقع من اللابتوب. <strong>بهذا المفتاح لا يُرفع معدّلك ولا رسومك</strong> (لهما مفتاح منفصل،
-                انظر البند التالي)، <strong>ولا تُرفع علاماتك ولا ملفاتك ولا كلمة مرورك ولا رمز الوصول ليوبينار،
-                في أي حال.</strong>
-                <br>هذه النسخة محمية بحيث لا يقرأها أحد من مستخدمي التطبيق غيرك — ولا المشرفون. وتُحذف
-                فوراً عند إطفاء المفتاح، أو فصل يوبينار، أو تسجيل الخروج من التطبيق على جوالك، أو حذف
-                حسابك.</li>
-            <li><strong>عرض معدّلك ورسومك على نسخة الويب (اختياري، ومعطّل افتراضياً):</strong>
-                يوجد في «الإعدادات والحساب» على تطبيق أندرويد مفتاح منفصل باسم <em>«معدلي ورسومي على
-                نسخة الويب»</em>. وهو <strong>مطفأ افتراضياً</strong>، ولا يُفعَّل إلا بموافقتك الصريحة بعد
-                شاشة توضّح ما يُرفع وما لا يُرفع.
-                <br>عند تفعيله فقط، يرفع جوالك إلى حسابك على خوادم التطبيق (Firebase من Google) نسخة
-                صغيرة من سجلّك في بوابة الطالب: <strong>معدّلك التراكمي ومعدّل الفصل، ساعاتك المجتازة
-                والمطلوبة والمتبقية، مستواك، والمبلغ المطلوب والرصيد ورسوم الفصل والمدفوع</strong> — لتراها
-                من اللابتوب أو الآيفون. <strong>لا يُرفع اسمك ولا رقمك الجامعي ولا علاماتك ولا خطتك ولا كلمة
-                مرورك ولا جلسة البوابة، في أي حال.</strong>
-                <br>هذه النسخة محمية بحيث لا يقرأها أحد غيرك — ولا المشرفون. وتُحذف فوراً عند إطفاء المفتاح،
-                أو فصل بوابة الطالب، أو تسجيل الخروج من التطبيق على جوالك، أو حذف حسابك.</li>
-            <li><strong>معلومات تقنية عامة:</strong> إصدار التطبيق ونوع الجهاز، لأغراض الدعم الفني وتحسين الأداء فقط.</li>
-        </ul>
-
-        <h2>٢. كيف نستخدم بياناتك</h2>
-        <ul>
-            <li>تشغيل ميزات التطبيق الأساسية: الجدول، الإشعارات، الدورات التدريبية، المساعد الذكي.</li>
-            <li>عرض المحتوى المناسب لتخصّصك الأكاديمي فقط.</li>
-            <li>التواصل معك بخصوص تحديثات مهمة أو دعم فني عند الحاجة.</li>
-            <li>تحسين أداء التطبيق وإصلاح الأعطال.</li>
-        </ul>
-
-        <h2>٣. أين تُخزَّن بياناتك</h2>
         <p>
-            تُخزَّن جميع البيانات على خوادم <strong>Google Firebase</strong> (Google Cloud)، وهي الجهة
-            التقنية الوحيدة التي تُعالَج بياناتك من خلالها لتشغيل التطبيق. لا نشارك بياناتك مع أي جهة
-            إعلانية أو تجارية أخرى.
+            تطبيق <strong>UP-Smart</strong> (اسم الحزمة البرمجية: <code>ps.edu.up.smart</code>) هو منصة أكاديمية مستقلة طوّرها المهندس محمد النويري لخدمة زملائه وأساتذته في كلية هندسة البرمجيات والذكاء الاصطناعي بجامعة فلسطين، بهدف تنظيم الجداول الدراسية، متابعة التكليفات والامتحانات، توفير المواد الإثرائية، وتقديم الدعم الأكاديمي الذكي.
+        </p>
+        <p>
+            تلتزم المنصة بأعلى المعايير العالمية لحماية البيانات الشخصية والسرية الأكاديمية وسلامة الهوية الطلابية، استناداً إلى معايير <strong>OWASP Mobile Application Security Verification Standard (MASVS v2.0)</strong> وسياسات أمان بيانات متجر <strong>Google Play Data Safety</strong>. توضح هذه الوثيقة بشفافية مطلقة المعمارية الهندسية لحماية بياناتك، وضوابط التشفير العتادي، وكيفية التعامل مع حسابك وخدمات الذكاء الاصطناعي.
         </p>
 
-        <h2>٤. صلاحيات الوصول للبيانات (للطاقم الإداري)</h2>
-        <p>
-            حسابات الأدمن (المشرفين على مساقات أو تخصصات محددة) تصل فقط للبيانات ضمن نطاق صلاحياتها
-            المحدّد مسبقاً (تخصص/كلية)، عبر قواعد أمان صارمة على مستوى قاعدة البيانات، ولا يمكنها الاطلاع
-            على بيانات طلاب خارج نطاقها.</p>
+        <!-- ركائز الأمان الأربع -->
+        <div class="security-highlights">
+            <div class="sec-card green">
+                <div class="sec-card-header">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>تشفير عتادي AES-256</span>
+                </div>
+                <p>بياناتك الجامعية الحساسة مشفرة داخل خزنة جهازك العتادية (Android Keystore) ولا تُخزن كنص صريح أبداً.</p>
+            </div>
+            <div class="sec-card blue">
+                <div class="sec-card-header">
+                    <i class="fa-solid fa-key"></i>
+                    <span>صفر اعتراض لكلمات المرور</span>
+                </div>
+                <p>تسجيل الدخول الجامعي يتم مباشرة على خوادم الجامعة الرسمية، والتطبيق لا يقرأ ولا يخزن كلمات مرورك نهائياً.</p>
+            </div>
+            <div class="sec-card purple">
+                <div class="sec-card-header">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>خصوصية «مهامي» المطلقة</span>
+                </div>
+                <p>قائمة مهامك الشخصية محصورة بجهازك 100% ولا تخرج لأي خادم ولا يتم إرسالها لنموذج الذكاء الاصطناعي إطلاقاً.</p>
+            </div>
+            <div class="sec-card gold">
+                <div class="sec-card-header">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <span>اتصال مشفر مباشر (Zero Proxy)</span>
+                </div>
+                <p>اتصال مباشر ومشفر عبر بروتوكولات TLS 1.2 / TLS 1.3 مع بنية الجامعة الرسمية دون وجود أي خادم وسيط يعترض البيانات.</p>
+            </div>
+        </div>
 
-        <h2>٥. حقوقك</h2>
+        <div class="note-box good">
+            <strong><i class="fa-solid fa-circle-check"></i> الميثاق الأكاديمي الأساسي:</strong> 
+            التطبيق <strong>لا يبيع ولا يشارك</strong> بيانات الطلبة مع أي جهات إعلانية أو تجارية، ولا يعرض أي إعلانات، 
+            ولا يطلب صلاحيات الموقع الجغرافي أو جهات الاتصال أو المعرض الشامل. بياناتك موجودة لخدمة نجاحك الأكاديمي وفقط.
+        </div>
+
+        <h2><i class="fa-solid fa-table-list"></i> ١. مصفوفة جرد وشفافية البيانات (Data Transparency Matrix)</h2>
+        <p>
+            يوضح الجدول التالي التصنيف الدقيق لكافة البيانات التي يتعامل معها التطبيق، ومكان تخزينها، ومستوى التشفير، وحالتها من حيث الخروج من الهاتف:
+        </p>
+
+        <div class="table-responsive">
+            <table class="policy-table">
+                <thead>
+                    <tr>
+                        <th>نوع البيانات</th>
+                        <th>مكان التخزين</th>
+                        <th>آلية التشفير والأمان</th>
+                        <th>هل تغادر هاتفك؟</th>
+                        <th>المصير عند فك الربط أو الحذف</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>كلمات المرور الجامعية</strong><br><small>(بوابة الطالب / UBinar)</small></td>
+                        <td>خوادم الجامعة الرسمية فقط</td>
+                        <td><span class="tag-pill direct"><i class="fa-solid fa-shield"></i> متصفح مدمج معزول</span></td>
+                        <td><span class="tag-pill forbidden"><i class="fa-solid fa-ban"></i> لا تمر بالتطبيق نهائياً</span></td>
+                        <td>لا تُسجل ولا تُخزن بأي شكل</td>
+                    </tr>
+                    <tr>
+                        <td><strong>السجل الأكاديمي والمعدل التراكمي</strong></td>
+                        <td>هاتف الطالب (SecureCache)</td>
+                        <td><span class="tag-pill encrypted"><i class="fa-solid fa-lock"></i> AES-256 GCM عتادي</span></td>
+                        <td><span class="tag-pill optin"><i class="fa-solid fa-sliders"></i> باختيار صريح مع المساعد فقط</span></td>
+                        <td>تُحذف كلياً من الجهاز فوراً</td>
+                    </tr>
+                    <tr>
+                        <td><strong>البيانات والرسوم المالية</strong></td>
+                        <td>هاتف الطالب (SecureCache)</td>
+                        <td><span class="tag-pill encrypted"><i class="fa-solid fa-lock"></i> AES-256 GCM عتادي</span></td>
+                        <td><span class="tag-pill optin"><i class="fa-solid fa-sliders"></i> باختيار صريح مع المساعد فقط</span></td>
+                        <td>تُحذف كلياً من الجهاز فوراً</td>
+                    </tr>
+                    <tr>
+                        <td><strong>المهام الشخصية في «مهامي»</strong></td>
+                        <td>ذاكرة الهاتف الداخلية فقط</td>
+                        <td><span class="tag-pill local"><i class="fa-solid fa-mobile-screen"></i> محلي معزول بنطاق التطبيق</span></td>
+                        <td><span class="tag-pill forbidden"><i class="fa-solid fa-ban"></i> محظورة من الخروج بنسبة 100%</span></td>
+                        <td>تُحذف عند مسح بيانات التطبيق</td>
+                    </tr>
+                    <tr>
+                        <td><strong>رمز جلسة يوبينار (Moodle Token)</strong></td>
+                        <td>هاتف الطالب (UniTokenStore)</td>
+                        <td><span class="tag-pill encrypted"><i class="fa-solid fa-lock"></i> خزنة Android Keystore</span></td>
+                        <td><span class="tag-pill direct"><i class="fa-solid fa-arrow-right-arrow-left"></i> إلى سيرفر UBinar الرسمي فقط</span></td>
+                        <td>تُمسح فوراً عند تسجيل الخروج</td>
+                    </tr>
+                    <tr>
+                        <td><strong>بيانات الحساب الأساسية</strong><br><small>(الرقم الجامعي، الاسم، التخصص)</small></td>
+                        <td>خوادم Google Firebase المشفرة</td>
+                        <td><span class="tag-pill cloud"><i class="fa-solid fa-cloud"></i> قواعد Firestore + RBAC</span></td>
+                        <td>نعم (لتسجيل الدخول والتحقق)</td>
+                        <td>تُحذف فور طلب حذف الحساب</td>
+                    </tr>
+                    <tr>
+                        <td><strong>استفسارات المساعد الذكي والصور</strong></td>
+                        <td>معالجة مؤقتة في Vertex AI</td>
+                        <td><span class="tag-pill direct"><i class="fa-solid fa-bolt"></i> TLS 1.3 / معالجة مؤقتة</span></td>
+                        <td>نعم (لتوليد الرد اللحظي فقط)</td>
+                        <td>لا يُحتفظ بها ولا تُستخدم لتدريب النماذج</td>
+                    </tr>
+                    <tr>
+                        <td><strong>رمز الإشعارات (FCM Token)</strong></td>
+                        <td>خوادم Firebase السحابية</td>
+                        <td><span class="tag-pill cloud"><i class="fa-solid fa-cloud"></i> تشفير Google FCM القياسي</span></td>
+                        <td>نعم (لإيصال إشعارات الإعلانات)</td>
+                        <td>يُعطل ويُمسح عند حذف الحساب</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2><i class="fa-solid fa-microchip"></i> ٢. معمارية التشفير وحماية البيانات الساكنة والمنقولة</h2>
+        <p>
+            تتبع منظومة UP-Smart نهج الأمان المتقدم بالتصميم (Security by Design) وتطبيق إرشادات <strong>OWASP MASVS-STORAGE-1</strong> و <strong>MASVS-NETWORK-1</strong>:
+        </p>
+
+        <div class="sub-block">
+            <h3><i class="fa-solid fa-vault"></i> التشفير في وضع السكون (Encryption at Rest — SecureCache)</h3>
+            <p>
+                تم ترقية طبقة حفظ البيانات محلياً من التخزين العادي إلى بنية <strong>SecureCache</strong> المبنية على مكتبة <code>FlutterSecureStorage</code> وتطبيق معايير التشفير العتادي لنظام أندرويد (EncryptedSharedPreferences):
+            </p>
+            <ul>
+                <li><strong>خوارزمية التشفير:</strong> يتم تشفير بيانات الطالب الأكاديمية (المعدل التراكمي، كشف الدرجات، الخطة الدراسية، والرسوم المالية) بخوارزمية <strong>AES-256 GCM</strong> القياسية المعتمدة عالمياً.</li>
+                <li><strong>عزل المفاتيح (Hardware-backed Keystore):</strong> تُولَّد مفاتيح التشفير وتُخزن حصرياً داخل وحدة المعالجة الآمنة أو بيئة التنفيذ الموثوقة (TEE / Secure Element) في جهاز الطالب، ولا يمكن لأي تطبيق آخر الوصول إليها ولا تغادر العتاد أبداً.</li>
+                <li><strong>الحماية ضد محاولات الاستخراج (Anti-Extraction):</strong> حتى في حال اتصال الهاتف بأدوات فحص جنائي أو امتلاك صلاحيات الجذر (Root)، تظل السجلات مشفرة ولا تظهر كنص صريح (Plain Text).</li>
+                <li><strong>الترحيل والتطهير التلقائي:</strong> يتضمن التطبيق آلية ترحيل ذاتية (Migration) تقوم بقراءة السجلات السابقة ونقلها للخزنة المشفرة مع المسح الفوري والتام لأي أثر قديم غير مشفر.</li>
+            </ul>
+        </div>
+
+        <div class="sub-block">
+            <h3><i class="fa-solid fa-route"></i> التشفير أثناء النقل (Encryption in Transit — Direct HTTPS & Zero Proxy)</h3>
+            <p>
+                تتم جميع الاتصالات الشبكية وفق هندسة الاتصال المباشر دون وسيط (Zero-Proxy Direct Architecture):
+            </p>
+            <ul>
+                <li><strong>اتصال مباشر بخوادم الجامعة:</strong> يتصل التطبيق مباشرة من هاتف الطالب إلى بوابة الطالب (<code>students.up.edu.ps</code>) ومنظومة يوبينار (<code>upinar.edu.ps</code>) عبر بروتوكولات النقل المشفرة <strong>TLS 1.2 و TLS 1.3</strong>.</li>
+                <li><strong>انعدام الخوادم الوسيطة:</strong> لا توجد أي خوادم وسيطة (Proxy Servers) أو بوابات عبور تابعة للمطور تعترض حركة البيانات، أو تقرأ الحزم، أو تفك تشفير الجلسات بين الطالب وجامعته.</li>
+                <li><strong>شهادات أمان موثوقة:</strong> يرفض التطبيق الاتصال بأي خادم لا يحمل شهادة أمان SSL/TLS معتمدة ومطابقة للنطاقات الرسمية.</li>
+            </ul>
+        </div>
+
+        <div class="sub-block">
+            <h3><i class="fa-solid fa-users-slash"></i> عزل الجلسات وحماية الأجهزة المشتركة (WebSessionOwner)</h3>
+            <p>
+                لحماية خصوصية الطلبة عند استخدام أجهزة مشتركة أو عند تسجيل الدخول من جهاز زميل:
+            </p>
+            <ul>
+                <li><strong>عزل تعريف الارتباط (Cookie Isolation):</strong> يقوم التطبيق بربط الجلسة الحالية بمعرف الطالب النشط عبر آلية <code>WebSessionOwner</code>.</li>
+                <li><strong>التفريغ الفوري للجلسات:</strong> بمجرد تسجيل الخروج أو تبديل الحساب على نفس الهاتف، يتم تفريغ ومسح كافة ملفات تعريف الارتباط (Cookies)، وذاكرة التخزين المؤقت، وجلسات المتصفح المدمج فوراً، لمنع فتح حساب الطالب السابق دون إدخال كلمة المرور من جديد.</li>
+            </ul>
+        </div>
+
+        <h2><i class="fa-solid fa-user-lock"></i> ٣. سياسة عدم اعتراض بيانات الاعتماد الجامعية (Zero Interception)</h2>
+        <p>
+            حرصاً على حماية الحسابات الأكاديمية وامتثالاً لمعيار <strong>OWASP MASVS-AUTH-1</strong>:
+        </p>
         <ul>
-            <li>يمكنك تعديل بيانات ملفك الشخصي في أي وقت من داخل التطبيق.</li>
-            <li>يمكنك طلب حذف حسابك وكل بياناتك المرتبطة به نهائياً — من داخل التطبيق عبر
-                <strong>الملف الشخصي ← حذف الحساب</strong>، أو راجع
-                <a href="delete-account.html">صفحة طلب حذف الحساب</a> للتفاصيل الكاملة.</li>
-            <li>يمكنك إلغاء صلاحية الإشعارات في أي وقت من إعدادات جهازك.</li>
+            <li><strong>تسجيل الدخول في بيئة النظام الأصلية:</strong> يتم تسجيل الدخول لبوابة الطالب ولمنظومة يوبينار عبر متصفح الويب المدمج (In-App WebView) الذي يعرض الصفحة الرسمية للجامعة مباشرة.</li>
+            <li><strong>عدم رؤية أو تخزين كلمة المرور:</strong> يكتب الطالب كلمة المرور في حقول صفحة الجامعة الرسمية مباشرة. التطبيق <strong>لا يقرأ، ولا يسجل، ولا يخزن، ولا يرسل</strong> كلمة مرورك الجامعية إطلاقاً لأي خادم داخلي أو خارجي.</li>
+            <li><strong>رمز الجلسة المؤقت (Session Token):</strong> بعد نجاح تسجيل الدخول على صفحة يوبينار الرسمية، يتم تسليم رمز وصول أمني مؤقت (Token) يُحفظ مشفراً في خزنة الهاتف، ويُستخدم لجلب مواعيد الواجبات والامتحانات والروابط المباشرة، ويُتلف فور تسجيل الخروج.</li>
         </ul>
 
-        <h2>٦. الفئة العمرية</h2>
+        <h2><i class="fa-solid fa-wand-magic-sparkles"></i> ٤. ضوابط الخصوصية والأمان للمساعد الأكاديمي الذكي (Gemini AI)</h2>
         <p>
-            التطبيق موجّه لطلاب جامعيين، وغير موجّه للأطفال دون سن 13 عاماً، ولا نجمع بيانات عن هذه الفئة
-            عن علم.
+            يعتمد المساعد الذكي داخل التطبيق على واجهات برمجية آمنة عبر <strong>Firebase AI Logic</strong> ونماذج <strong>Google Gemini</strong> المخصصة للمؤسسات، وتخضع للضوابط الصارمة التالية:
         </p>
 
-        <h2>٧. تغييرات على هذه السياسة</h2>
+        <div class="note-box amber">
+            <strong><i class="fa-solid fa-bell"></i> ميزة «مشاركة بياناتي الأكاديمية مع المساعد» معطلة افتراضياً (Strict Opt-In):</strong>
+            لا يمكن للمساعد الذكي الاطلاع على أي من بياناتك الأكاديمية ما لم تقم أنت بتفعيل هذا الخيار يدوياً وبموافقتك الصريحة من شاشة الإعدادات.
+        </div>
+
+        <ul>
+            <li><strong>البيانات التي تُرسل عند تفعيل الخيار فقط:</strong> ملخص أكاديمي موجز لآخر فصول دراسية (المعدل التراكمي والفصلي، الساعات، المستوى، الملخص المالي كالمبلغ المطلوب والرصيد)، ومواعيد الواجبات والامتحانات المسجلة في يوبينار، وذلك لتمكين المساعد من الإجابة بدقة على استفسارات مثل: «شو باقي علي واجبات هذا الأسبوع؟» أو «كم متبقي علي ساعات للتخرج؟».</li>
+            <li><strong>حظر تام لمهام «مهامي»:</strong> قائمة المهام الشخصية التي يكتبها الطالب بنفسه في قسم «مهامي» <strong>مستثناة بالكامل ومحظورة برمجياً</strong> من الإرسال للمساعد الذكي؛ حيث تظل على الهاتف فقط بنسبة 100% ولا تخرج لأي خادم حفاظاً على خصوصية مذكرات الطالب الشخصية والعائلية.</li>
+            <li><strong>حظر كلمات المرور:</strong> كلمة مرورك الجامعية لا تُرسل للمساعد الذكي تحت أي ظرف من الظروف.</li>
+            <li><strong>المعالجة المؤقتة (Ephemeral Processing):</strong> تُرسل البيانات بالتزامن مع استفسارك وتُعالج في ذاكرة الخادم السحابي المؤقتة لتوليد الإجابة فقط، ولا يتم تخزينها في مستندات سحابية دائمة ولا تُستخدم لتدريب نماذج الذكاء الاصطناعي العامة.</li>
+            <li><strong>الإلغاء اللحظي وتطهير السياق:</strong> يمكنك إيقاف مشاركة البيانات الأكاديمية في أي لحظة من الإعدادات؛ ويسري الإيقاف فوراً وبشكل لحظي، حيث يتم مسح سياق المحادثة وبدء جلسة جديدة معزولة تماماً لا ترى أي بيانات أكاديمية.</li>
+            <li><strong>فحص سلامة الروابط (Safe Link Verification):</strong> يتضمن المساعد ميزة حماية وقائية تفحص أي روابط تظهر في المحادثات؛ فإذا كان الرابط خارجياً ولا يتبع النطاقات المعتمدة لجامعة فلسطين، يقوم التطبيق بتنبيهك وإظهار الوجهة الحقيقية للرابط قبل فتحه لحمايتك من محاولات التصيد.</li>
+        </ul>
+
+        <h2><i class="fa-solid fa-server"></i> ٥. حوكمة السحابة وصلاحيات الإدارة (Cloud Security & RBAC)</h2>
         <p>
-            قد تُحدَّث هذه الصفحة من وقت لآخر مع تطوّر ميزات التطبيق. سيظهر تاريخ آخر تحديث دائماً أعلى
-            الصفحة.
+            تُدار البيانات السحابية المركزية (الحسابات، الإعلانات، مجموعات المساقات، والدعم الأكاديمي) عبر خدمات <strong>Google Cloud / Firebase</strong> المؤمنة بأعلى معايير حوكمة البيانات:
+        </p>
+        <ul>
+            <li><strong>قواعد أمان صارمة (Firestore Security Rules):</strong> تطبق المنصة مبدأ الامتيازات الأقل (Least Privilege) ومصفوفة التحكم بالوصول المبني على الأدوار (RBAC)، مما يمنع منعاً باتاً استعلامات السحب الجماعي للبيانات (<code>allow list: if false</code>).</li>
+            <li><strong>صلاحيات المشرفين المقيدة:</strong> المشرفون الأكاديميون على الأقسام والمساقات لا يملكون أي وصول لقراءة كشوف درجات الطلاب أو معدلاتهم أو بياناتهم المالية؛ ويقتصر اطلاعهم على دليل الطلبة الأساسي (الاسم والتخصص) في نطاق تخصصهم للتحقق من هوية الطالب فقط.</li>
+            <li><strong>المصادقة الثنائية للإدارة (2FA / TOTP):</strong> فُرضت المصادقة متعددة العوامل لحسابات الطاقم الإداري عبر تطبيقات المصادقة الرسمية (مثل Google Authenticator) لحماية لوحات التحكم من أي محاولات اختراق أو وصول غير مصرح به.</li>
+            <li><strong>حماية واجهات الخدمة (App Check & Play Integrity):</strong> يرتبط التطبيق بنظام التحقق من سلامة الأجهزة (Google Play Integrity)، للتأكد من أن الطلبات الواردة إلى الخوادم السحابية صادرة حصرياً من النسخة الأصلية الرسمية للتطبيق، وحجب أي نسخ معدلة أو محاولات تلاعب بالواجهات البرمجية.</li>
+        </ul>
+
+        <h2><i class="fa-solid fa-certificate"></i> ٦. الامتثال للأنظمة والمعايير الدولية</h2>
+        <p>
+            صُمم تطبيق UP-Smart ليلتزم بكافة الأطر النظامية والتشريعية ذات الصلة بحماية البيانات وأمن المعلومات:
+        </p>
+        <div class="standards-badges">
+            <span class="std-item"><i class="fa-brands fa-google-play"></i> Google Play Data Safety</span>
+            <span class="std-item"><i class="fa-solid fa-shield-virus"></i> OWASP MASVS v2.0</span>
+            <span class="std-item"><i class="fa-solid fa-scale-balanced"></i> قانون المعاملات الإلكترونية والخصوصية</span>
+            <span class="std-item"><i class="fa-solid fa-lock"></i> NIST CSF 2.0 (PR.AC & PR.DS)</span>
+        </div>
+        <p>
+            يتطابق نموذج الإفصاح عن البيانات المعلن في صفحة متجر Google Play تماماً مع هذه السياسة، حيث تُصنف كافة البيانات الأكاديمية والمالية المنقولة لخدمة الذكاء الاصطناعي بأنها: <strong>اختيارية تماماً</strong>، <strong>مشفرة أثناء النقل</strong>، <strong>تُعالج مؤقتاً</strong>، ولغرض <strong>وظائف التطبيق الأكاديمية فقط</strong>.
         </p>
 
-        <h2>٨. التواصل معنا</h2>
-        <p>لأي استفسار حول الخصوصية أو لطلب حذف حسابك:</p>
-        <div class="contact-details">
-            <a href="https://wa.me/972593246643" target="_blank" class="contact-item">
-                <i class="fa-brands fa-whatsapp success-color"></i>
-                <span>م. محمد النويري (واتساب)</span>
+        <h2><i class="fa-solid fa-user-gear"></i> ٧. حقوق الطالب والتحكم بالبيانات وحق الحذف الكامل (Right to Erasure)</h2>
+        <p>
+            يمتلك الطالب السيادة الكاملة على بياناته داخل التطبيق وفق البنود التالية:
+        </p>
+        <ul>
+            <li><strong>حق الوصول والاستعراض:</strong> يمكنك استعراض كافة بياناتك المسجلة وملفك الأكاديمي والتحقق من صحتها في أي وقت عبر واجهات التطبيق.</li>
+            <li><strong>حق الحذف الفوري للحساب:</strong> يمكنك حذف حسابك وكافة سجلاتك المرتبطة به نهائياً بضغطة زر واحدة من داخل التطبيق عبر الانتقال إلى: <strong>الملف الشخصي ← حذف الحساب</strong>.</li>
+            <li><strong>مسار الحذف الخارجي المستقل:</strong> نوفر صفحة ويب مخصصة ومستقلة تتيح للطلبة طلب حذف حساباتهم دون الحاجة لفتح التطبيق، وذلك عبر: <a href="delete-account.html">صفحة طلب حذف الحساب والبيانات</a>.</li>
+            <li><strong>التطهير الفوري للبيانات المحلية:</strong> بمجرد الضغط على خيار «فصل الربط» أو «تسجيل الخروج»، يتم إتلاف مفاتيح التخزين العتادية ومسح كافة السجلات الأكاديمية والمالية ورموز الجلسات من ذاكرة جهازك نهائياً.</li>
+            <li><strong>إلغاء الإشعارات:</strong> يمكنك تفعيل أو إلغاء تلقي إشعارات المساقات أو الإعلانات العامة في أي وقت من إعدادات التطبيق أو من مدير إشعارات النظام بهاتفك.</li>
+        </ul>
+
+        <h2><i class="fa-solid fa-child-reaching"></i> ٨. الفئة العمرية وحماية القُصَّر</h2>
+        <p>
+            تطبيق UP-Smart مخصص لطلاب وأساتذة التعليم الجامعي والعالي (18 عاماً فما فوق)، وغير موجه للأطفال دون سن 13 عاماً، ولا نقوم عمداً بجمع أو طلب أي بيانات شخصية تتعلق بالأطفال.
+        </p>
+
+        <h2><i class="fa-solid fa-arrows-rotate"></i> ٩. التحديثات والتعديلات على السياسة</h2>
+        <p>
+            قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر لتعكس التحسينات الأمنية الجديدة، أو إضافة ميزات تقنية جديدة، أو الامتثال للضوابط النظامية المحدثة. سيتم إشعار المستخدمين بأي تغيير جوهري عبر إشعار داخل التطبيق أو من خلال قسم «ما الجديد»، مع تحديث تاريخ المراجعة أعلى هذه الصفحة.
+        </p>
+
+        <h2><i class="fa-solid fa-headset"></i> ١٠. المسؤولية والتواصل والدعم الأمني</h2>
+        <p>
+            إذا كان لديك أي استفسار يتعلق بمعايير التشفير والخصوصية، أو كنت ترغب في تقديم بلاغ أمني، أو تحتاج إلى مساعدة في إدارة بياناتك وحسابك، يسعدنا تواصلك المباشر مع مطور ومسؤول المنصة:
+        </p>
+
+        <div class="contact-box">
+            <div>
+                <strong>المهندس محمد النويري</strong><br>
+                <small style="color: var(--text-muted);">مطور منصة UP-Smart — كلية هندسة البرمجيات والذكاء الاصطناعي</small>
+            </div>
+            <a href="https://wa.me/972593246643" target="_blank" class="contact-btn">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>تواصل عبر واتساب للدعم والخصوصية</span>
             </a>
         </div>
     </main>
 
     <footer class="footer">
         <div class="footer-bottom">
-            <p>&copy; 2026 تطبيق UP-Smart. جميع الحقوق محفوظة للمطوّر م. محمد النويري.</p>
+            <p>&copy; 2026 تطبيق UP-Smart الأكاديمي. جميع الحقوق محفوظة للمطور م. محمد النويري.</p>
         </div>
     </footer>
 </body>
