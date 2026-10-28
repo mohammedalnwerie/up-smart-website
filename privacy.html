@@ -312,7 +312,7 @@
     <main class="policy-wrap">
         <h1>سياسة الخصوصية وحماية البيانات</h1>
         <div class="updated-meta">
-            <span><i class="fa-regular fa-calendar-check"></i> آخر تحديث: 24 أكتوبر 2026م</span>
+            <span><i class="fa-regular fa-calendar-check"></i> آخر تحديث: 28 أكتوبر 2026م</span>
             <span><i class="fa-solid fa-code-commit"></i> الإصدار المعتمد: <span class="version-badge">v1.11.8+</span></span>
             <span><i class="fa-solid fa-building-columns"></i> كلية هندسة البرمجيات والذكاء الاصطناعي — جامعة فلسطين</span>
         </div>
@@ -387,18 +387,32 @@
                         <td>لا تُسجل ولا تُخزن بأي شكل</td>
                     </tr>
                     <tr>
-                        <td><strong>السجل الأكاديمي والمعدل التراكمي</strong></td>
+                        <td><strong>السجل الأكاديمي والمعدل التراكمي</strong><br><small>(المعدل، الساعات، العلامات)</small></td>
                         <td>هاتف الطالب (SecureCache)</td>
                         <td><span class="tag-pill encrypted"><i class="fa-solid fa-lock"></i> AES-256 GCM عتادي</span></td>
-                        <td><span class="tag-pill optin"><i class="fa-solid fa-sliders"></i> باختيار صريح مع المساعد فقط</span></td>
+                        <td><span class="tag-pill optin"><i class="fa-solid fa-sliders"></i> باختيار صريح فقط: للمساعد، أو مشفّرة برمزك لنسخة الويب</span></td>
                         <td>تُحذف كلياً من الجهاز فوراً</td>
                     </tr>
                     <tr>
                         <td><strong>البيانات والرسوم المالية</strong></td>
                         <td>هاتف الطالب (SecureCache)</td>
                         <td><span class="tag-pill encrypted"><i class="fa-solid fa-lock"></i> AES-256 GCM عتادي</span></td>
-                        <td><span class="tag-pill optin"><i class="fa-solid fa-sliders"></i> باختيار صريح مع المساعد فقط</span></td>
+                        <td><span class="tag-pill optin"><i class="fa-solid fa-sliders"></i> باختيار صريح فقط: للمساعد، أو مشفّرة برمزك لنسخة الويب</span></td>
                         <td>تُحذف كلياً من الجهاز فوراً</td>
+                    </tr>
+                    <tr>
+                        <td><strong>نسخة الويب المشفّرة</strong><br><small>(«معدلي وعلاماتي وملفاتي على الويب»: المعدل، الساعات، الرسوم، العلامات، أسماء ملفات يوبينار)</small></td>
+                        <td>خوادم Google Firebase — بحسابك فقط</td>
+                        <td><span class="tag-pill encrypted"><i class="fa-solid fa-key"></i> مشفّرة على هاتفك برمزك (AES-256 GCM) — الخادم لا يملك المفتاح</span></td>
+                        <td><span class="tag-pill optin"><i class="fa-solid fa-sliders"></i> فقط إذا شغّلتها، ومطفأة افتراضياً</span></td>
+                        <td>تُحذف عند إطفائها، أو الخروج من حسابك على الهاتف، أو حذف الحساب</td>
+                    </tr>
+                    <tr>
+                        <td><strong>مواعيد يوبينار على نسخة الويب</strong><br><small>(أسماء المساقات، الواجبات والامتحانات، «سلّمت» و«منجز»)</small></td>
+                        <td>خوادم Google Firebase — بحسابك فقط</td>
+                        <td><span class="tag-pill cloud"><i class="fa-solid fa-cloud"></i> قواعد Firestore: أنت فقط، ولا المشرفين</span></td>
+                        <td><span class="tag-pill optin"><i class="fa-solid fa-sliders"></i> فقط إذا شغّلتها، ومطفأة افتراضياً</span></td>
+                        <td>تُحذف عند إطفائها، أو فصل يوبينار، أو الخروج من حسابك على الهاتف، أو حذف الحساب</td>
                     </tr>
                     <tr>
                         <td><strong>المهام الشخصية في «مهامي»</strong></td>
@@ -454,6 +468,21 @@
                 <li><strong>عزل المفاتيح (Hardware-backed Keystore):</strong> تُولَّد مفاتيح التشفير وتُخزن حصرياً داخل وحدة المعالجة الآمنة أو بيئة التنفيذ الموثوقة (TEE / Secure Element) في جهاز الطالب، ولا يمكن لأي تطبيق آخر الوصول إليها ولا تغادر العتاد أبداً.</li>
                 <li><strong>الحماية ضد محاولات الاستخراج (Anti-Extraction):</strong> حتى في حال اتصال الهاتف بأدوات فحص جنائي أو امتلاك صلاحيات الجذر (Root)، تظل السجلات مشفرة ولا تظهر كنص صريح (Plain Text).</li>
                 <li><strong>الترحيل والتطهير التلقائي:</strong> يتضمن التطبيق آلية ترحيل ذاتية (Migration) تقوم بقراءة السجلات السابقة ونقلها للخزنة المشفرة مع المسح الفوري والتام لأي أثر قديم غير مشفر.</li>
+            </ul>
+        </div>
+
+        <div class="sub-block">
+            <h3><i class="fa-solid fa-key"></i> نسخة الويب المشفّرة برمزك («معدلي وعلاماتي وملفاتي على الويب»)</h3>
+            <p>
+                موقع التطبيق على اللابتوب لا يستطيع ربط بوابة الطالب ولا يوبينار. إذا أردت رؤية معدلك وعلاماتك من هناك، يمكنك تشغيل هذا الخيار من إعدادات التطبيق على هاتفك — وهو <strong>مطفأ افتراضياً</strong>:
+            </p>
+            <ul>
+                <li><strong>ما يُرفع:</strong> المعدل التراكمي والفصلي، الساعات المجتازة والمتبقية، المستوى، الرسوم (المطلوب، الرصيد، رسوم الفصل، المدفوع)، علامات الفصول من بوابة الطالب، وأسماء ملفات وتسجيلات مساقاتك على يوبينار.</li>
+                <li><strong>ما لا يُرفع أبداً:</strong> اسمك ورقمك الجامعي، كلمة مرورك، رمز جلسة يوبينار، ولا الملفات نفسها ولا روابط تنزيلها.</li>
+                <li><strong>التشفير من طرف إلى طرف:</strong> يشفّر هاتفك هذه البيانات قبل أن تغادره بخوارزمية <strong>AES-256 GCM</strong>، بمفتاح مشتق بخوارزمية <code dir="ltr">PBKDF2-SHA256</code> من <strong>رمز عشوائي من 12 خانة يولّده هاتفك لك</strong>. المحفوظ على خوادمنا نص مشفّر لا يمكن قراءته بدون رمزك — <strong>لا من المشرفين، ولا من صاحب التطبيق عبر لوحة التحكم</strong>.</li>
+                <li><strong>فتحها على الويب:</strong> تكتب الرمز في «حسابي ← بياناتي من جوالك»، ويتم فك التشفير داخل متصفحك. يبقى المفتاح في التبويب المفتوح فقط، ويُطلب الرمز من جديد عند إغلاقه — مناسب لأجهزة المختبرات المشتركة.</li>
+                <li><strong>التحكم:</strong> تجد رمزك في الهاتف متى شئت، ويمكنك توليد رمز جديد إذا اطّلع عليه أحد (فيتوقف القديم فوراً). إطفاء الخيار يحذف النسخة من خوادمنا فوراً.</li>
+                <li><strong>بصراحة:</strong> التشفير يحمي النسخة المحفوظة. أما صفحة الموقع التي تكتب فيها الرمز فهي من تطوير التطبيق نفسه؛ لذلك اكتب رمزك على موقع التطبيق الرسمي فقط (<code>up-smart-app.web.app</code>).</li>
             </ul>
         </div>
 
